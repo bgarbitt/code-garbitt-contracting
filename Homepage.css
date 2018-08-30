@@ -1,0 +1,4312 @@
+/*
+Can use ctrl+f to find specific css's as they may be split up by different
+functions. Code structure is as follows:
+* -----------------------------------------------------------------------------
+* Normal CSS
+* -----------------------------------------------------------------------------
+* | 
+* |--> Navigation Bar
+* |--> Services
+* 
+* -----------------------------------------------------------------------------
+* Media CSS (Width 1420px)
+* -----------------------------------------------------------------------------
+* -- Navigation Bar --
+* 
+* -----------------------------------------------------------------------------
+* Media CSS (Width 1100px)
+* -----------------------------------------------------------------------------
+* -- Navigation Bar --
+*/
+
+/*
+ * ----------------------------------------------------------------------------
+ *                                  Normal CSS
+ * ----------------------------------------------------------------------------
+*/
+@media all and (max-width: 601px) {
+  /* #region navigation 600px mobile */
+  .navigation {
+    position: fixed;
+    top: 0;
+    height: 44px;
+    width: 100%;
+    padding-top: 0px;
+    background-color: #fff;
+    z-index: 1;
+    border-bottom-style: solid;
+    border-width: 2px;
+    border-bottom-color: rgb(0,0,0);
+    -webkit-box-shadow: 0px   2px  10px   0px black;
+    -moz-box-shadow: 0px   2px  10px   0px black;
+    box-shadow: 0px   2px  10px   0px black;
+    text-shadow: 1px 2px 2px rgba(0,0,0,0.5);
+  }
+  .navigation h1 {
+    font-size: 2em;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    padding-top: 6px;
+    text-align: center;
+  }
+  .navigation img {
+    position: fixed;
+    top: 3px;
+    left: 10px;
+    width: 90px;
+  }
+  .navigation-normal {
+    display: none;
+  }
+  .navigation-dropdown {
+    position: absolute;
+    display: inline-block;
+    font-size: 2em;
+    text-align: right;
+    right: 20px;
+    top: 2px;
+  }
+  .navigation-dropdown-button {
+    color: rgb(0, 0, 0);
+    background-color: rgb(230, 230, 230);
+    border-style: solid;
+    border-color: rgb(0,0,0);
+    font-size: 24px;
+    /*border-radius: 6px;*/
+    border-radius: 14% / 50%;
+    border-width: 2px;
+    padding: 4px 12px 4px 12px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-box-shadow: inset  4px  10px 10px -10px white,
+                        inset -4px -10px 20px -10px black,
+                               1px   2px  5px   0px black;
+    -moz-box-shadow: inset  4px  10px 10px -10px white,
+                     inset -4px -10px 20px -10px black,
+                            1px   2px  5px   0px black;
+    box-shadow: inset  4px  10px 10px -10px white,
+                inset -4px -10px 20px -10px black,
+                       1px   2px  5px   0px black;
+  }
+  .navigation-dropdown-content {
+    position: absolute;
+    font-size: 24px;
+    right: 0px;
+    width: 200px;
+    border-style: solid;
+    border-width: 2px;
+    background-color: white;
+    border-radius: 6px;
+    padding-right: 1px;
+    padding-left: 1px;
+  }
+  .navigation-dropdown-content a {
+    color: black;
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    text-decoration: none;
+    display: block;
+    border-radius: 6px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    padding-right: 5px;
+  }
+  .navigation-dropdown-content a:hover {
+    background-color: rgb(65, 65, 65);
+    color: white;
+  }
+  .navigation-dropdown:hover .navigation-dropdown-button {
+    background-color: rgb(65, 65, 65);
+    color: white;
+  }
+  /* #endregion navigation 600px mobile */
+  /* #region about 600px mobile */
+  .about {
+    /* In order to not be covered by the navigation bar */
+    padding-top: 46px;
+  }
+  .about-parallax {
+    /*padding-top: 143px;*/
+    /*opacity: 0.80;*/
+    /* Image to be used url("hexBack.jpg")*/
+    background-image: url("img/office.jpg");
+    overflow: auto;
+
+    /* Set specific height */
+    min-height: 200px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  6px 10px 0px black,
+                inset 0px -6px 10px 0px black;
+  }
+  .parallax-opacity {
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(255,255,255,0.1);
+  }
+  .parallax-pretty {
+    font: 400 32px "Lato", sans-serif;
+    padding: 10px;
+    margin: auto;
+    margin-top: 53px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .about-statement {
+    text-align: justify;
+    margin: auto;
+    font: 400 22px/1.8 "Lato", sans-serif;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(65, 65, 65);;
+    background-color: white;
+  }
+  /* #endregion about 600px mobile */
+  /* #region services 600px mobile */
+  .services-parallax {
+    /* Image to be used */
+    background-image: url("img/office.jpg");
+
+    /* Set specific height */
+    min-height: 200px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  6px 10px 0px black,
+                inset 0px -6px 10px 0px black;
+  }
+  .services-pretty {
+    font: 400 32px "Lato", sans-serif;
+    padding: 10px;
+    margin: auto;
+    margin-top: 71px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .services-statement {
+    margin: auto;
+    font: 400 22px/1.8 "Lato", sans-serif;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(65, 65, 65);
+    background-color: white;
+  }
+  .horizonatal-list-container {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+  }
+  ul.services-list {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+  }
+  ul.services-list > li {
+    background-color: white;
+    list-style-type: none;
+    display: inline-block;
+    min-width: 200px;
+  }
+  ul.services-list > li > a {
+    display: inline-block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    color: rgb(65, 65, 65);;
+  }
+  button[name="services-button"] {
+    font: 400 22px/1.8 "Lato", sans-serif;
+    background-color: white;
+    border: none;
+    color: rgb(65, 65, 65);
+    text-decoration: none;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 8px;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  button:hover[name="services-button"] {
+    background-color: rgb(65, 65, 65);
+    color: white;
+  }
+  .service-modal-backdrop {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  .service-modal-content {
+    background-color: rgb(185, 185, 185);
+    margin: 2% auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 86%;
+    height: 90%;
+    overflow-y: scroll;
+    padding-right: 17px;
+    box-sizing: content-box;
+    border-radius: 6px;
+  }
+  .service-modal-close {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    /*border-radius: 6px;*/
+    border-radius: 14% / 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: white;
+  }
+  .service-modal-content > h2 {
+    margin: 0;
+    font-size: 32px;
+  }
+  .service-modal-content > p {
+    margin: auto;
+    font: 400 22px/1.8 "Lato", sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(65, 65, 65);
+  }
+  .service-modal-content > h3 {
+    margin: 0;
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    border-top-style: solid;
+    border-width: 2px;
+    border-color: black;
+  }
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .service-modal-close:hover,
+  .service-modal-close:focus {
+    color: white;
+    background-color: rgb(65, 65, 65);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .service-modal-images {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgb(185, 185, 185);
+  }
+  li.service-modal-images-crop {
+    min-width: 0;
+    width: 300px;
+    height: 169px;
+    transform: translate(108px);
+    margin-bottom: 4px;
+    list-style-type: none;
+  }
+  li.service-modal-images-crop > a {
+    padding: 0;
+  }
+  .service-modal-images-crop img {
+    height: 169px;
+    width: 300px;
+    object-fit: contain;
+  }
+  /* #endregion services 600px mobile */
+  /* #region safety 600px mobile */
+  .safety-parallax {
+    /* Image to be used */
+    background-image: url("img/hexBack.jpg");
+
+    /* Set specific height */
+    min-height: 200px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  6px 10px 0px black,
+                inset 0px -6px 10px 0px black;
+  }
+  .safety-pretty {
+    font: 400 32px "Lato", sans-serif;
+    padding: 10px;
+    margin: auto;
+    margin-top: 71px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .safety-statement {
+    margin: auto;
+    font: 400 22px/1.8 "Lato", sans-serif;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(65, 65, 65);;
+    background-color: white;
+  }
+  /* #endregion safety 600px mobile */
+  /* #region fleet 600px mobile */
+  .fleet-parallax {
+    /* Image to be used */
+    background-image: url("img/fleet.jpg");
+
+    /* Set specific height */
+    min-height: 200px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  6px 10px 0px black,
+                inset 0px -6px 10px 0px black;
+  }
+  .fleet-pretty {
+    font: 400 32px "Lato", sans-serif;
+    padding: 10px;
+    margin: auto;
+    margin-top: 71px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  ul.fleet-list {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+  }
+  .fleet-list > li {
+    background-color: #fff;
+    list-style-type: none;
+    display: inline-block;
+    font: 400 25px/1.8 "Lato", sans-serif;
+    min-width: 0;
+    width: 210px;
+    height: 260px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .fleet-list > li:hover {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .fleet-list > li > p {
+    margin: 0;
+    padding-bottom: 5px;
+  }
+  button[name="fleet-button"] {
+    background-color: white;
+    border: none;
+    color: #777;
+    text-decoration: none;
+    font: 400 25px/1.8 "Lato", sans-serif;
+    margin: 3px 0 0 0;
+    padding: 8px;
+    width: 204px;
+    height: 204px;
+    border-radius: 10px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    background-size: cover;
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px;
+  }
+  button:hover[name="fleet-button"] {
+    cursor: pointer;
+  }
+  .fleet-modal-backdrop {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  .fleet-modal-content {
+    background-color: rgb(185, 185, 185);
+    margin: 2% auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 86%;
+    height: 90%;
+    overflow-y: scroll;
+    padding-right: 17px;
+    box-sizing: content-box;
+    border-radius: 6px;
+  }
+  .fleet-modal-close {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    /*border-radius: 6px;*/
+    border-radius: 14% / 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: white;
+  }
+  .fleet-modal-close:hover,
+  .fleet-modal-close:focus {
+    color: white;
+    background-color: rgb(65, 65, 65);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /*  slider code from: 
+      https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/
+  */
+  .slider {
+    margin: auto;
+    width: 95%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  .slides {
+    height: 90%;
+    display: flex;
+    overflow-x: auto;
+    border-radius: 5px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+  }
+  .slides::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+  }
+  .slides::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .slides > div {
+    flex-shrink: 0;
+    width: 100%;
+    border-radius: 10px;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider > a {
+    display: inline-flex;
+    width: 3rem;
+    height: 3rem;
+    background: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 16px 0.8rem 0.2rem 0;
+    position: relative;
+    color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+  }
+  .slider > a:hover {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .slider > a:active {
+    top: 1px;
+  }
+  .slider > a:focus {
+    background: #000;
+    color: white;
+  }
+  .slide > a > img {
+    margin: 0;
+    padding: 0;
+    max-height: calc(100vh - 24vh);
+    /*overflow: hidden;*/
+    text-align: center;
+    background-color: #777;
+    border-radius: 2px;
+  }
+  .fleet-modal-images {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #777;
+  }
+  /* #endregion fleet 600px mobile */
+  /* #region contact 600px mobile */
+  .contact-parallax {
+    /* Image to be used */
+    background-image: url("img/contact.jpg");
+    overflow: auto;
+
+    /* Set specific height */
+    min-height: 200px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  6px 10px 0px black,
+                inset 0px -6px 10px 0px black;
+  }
+  .contact-title {
+    font: 400 32px "Lato", sans-serif;
+    padding: 10px;
+    margin: auto;
+    margin-top: 71px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .contact-information-area {
+    border: black;
+    border-bottom-style: solid;
+    border-width: 2px;
+  }
+  .contact-information-area > p {
+    font-size: 24px;
+    position: relative;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .contact-message-form {
+    text-align: center;
+  }
+  .contact-message-form > label > input:not(:last-child) {
+    width: 50%;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 2px;
+    text-align: center;
+    font: 400 22px/1.8 "Lato", sans-serif;
+  }
+  .message {
+    width: 80%;
+    height: 100px;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 2px;
+    text-align: center;
+    font: 400 22px/1.8 "Lato", sans-serif;
+    text-overflow: ellipsis;
+  }
+  .contact-submit-button {
+    -webkit-box-shadow: inset  4px  10px 10px -10px white,
+                        inset -4px -10px 20px -10px black,
+                               1px   2px  5px   0px black;
+    -moz-box-shadow: inset  4px  10px 10px -10px white,
+                     inset -4px -10px 20px -10px black,
+                            1px   2px  5px   0px black;
+    box-shadow: inset  4px  10px 10px -10px white,
+                inset -4px -10px 20px -10px black,
+                       1px   2px  5px   0px black;
+    background-color: rgb(230, 230, 230);
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    /*border-radius: 6px;*/
+    border-radius: 4% / 40%;
+    font-size: 24px;
+    padding: 4px 12px 4px 12px;
+  }
+  .contact-submit-button:hover {
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    background-color: rgb(65, 65, 65);
+    color: white;
+  }
+  .contact-submit-button:active {
+    background-color: rgb(65, 65, 65);
+    color: white;
+  }
+  .contact-backdrop {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+    overflow: hidden;
+  }
+  .contact-box {
+    position: fixed;
+    width: 60%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+  }
+  .contact-box > h3 {
+    font-size: 30px;
+    border-bottom-style: double;
+    padding-bottom: 10px;
+  }
+  .contact-box > p {
+    font-size: 24px;
+  }
+  .contact-box > button {
+    -webkit-box-shadow: inset  4px  10px 10px -10px white,
+                        inset -4px -10px 20px -10px black,
+                               1px   2px  5px   0px black;
+    -moz-box-shadow: inset  4px  10px 10px -10px white,
+                     inset -4px -10px 20px -10px black,
+                            1px   2px  5px   0px black;
+    box-shadow: inset  4px  10px 10px -10px white,
+                inset -4px -10px 20px -10px black,
+                       1px   2px  5px   0px black;
+    background-color: rgb(230, 230, 230);
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    /*border-radius: 6px;*/
+    border-radius: 4% / 40%;
+    font-size: 24px;
+    padding: 4px 12px 4px 12px;
+  }
+  .sent-box {
+    position: fixed;
+    width: 26%;
+    height: 8%;
+    top: 92%;
+    left: 74%;
+    background-color: #777;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .sent-box > p {
+    font-size: 2.3vh;
+    margin: 0;
+    padding-left: 4px;
+    padding-top: 4px;
+  }
+  .contact-info {
+    font-size: 24px;
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    border-style: solid;
+    border-width: 2px;
+  }
+  .contact-info > h3 {
+    font-size: 30px;
+    border-bottom-style: solid;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .contact-info > p {
+    padding-left: 10px;
+  }
+  .contact-info > p > span {
+    color: white;
+    user-select: none;
+  }
+  /* #endregion contact 600px mobile */
+}
+@media all and (min-width: 601px) {
+  /* #region navigation 600px mobile */
+  .navigation {
+    position: fixed;
+    top: 0;
+    height: 44px;
+    width: 100%;
+    padding-top: 0px;
+    background-color: #fff;
+    z-index: 1;
+    border-bottom-style: solid;
+    border-width: 2px;
+    border-bottom-color: rgb(0,0,0);
+    -webkit-box-shadow: 0px   2px  10px   0px black;
+    -moz-box-shadow: 0px   2px  10px   0px black;
+    box-shadow: 0px   2px  10px   0px black;
+    text-shadow: 1px 2px 2px rgba(0,0,0,0.5);
+  }
+  .navigation h1 {
+    font-size: 2em;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    padding-top: 6px;
+    text-align: center;
+  }
+  .navigation img {
+    position: fixed;
+    top: 3px;
+    left: 10px;
+    width: 90px;
+  }
+  .navigation-normal {
+    display: none;
+  }
+  .navigation-dropdown {
+    position: absolute;
+    display: inline-block;
+    font-size: 2em;
+    text-align: right;
+    right: 20px;
+    top: 2px;
+  }
+  .navigation-dropdown-button {
+    color: rgb(0, 0, 0);
+    background-color: rgb(230, 230, 230);
+    border-style: solid;
+    border-color: rgb(0,0,0);
+    font-size: 24px;
+    /*border-radius: 6px;*/
+    border-radius: 14% / 50%;
+    border-width: 2px;
+    padding: 4px 12px 4px 12px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-box-shadow: inset  4px  10px 10px -10px white,
+                        inset -4px -10px 20px -10px black,
+                               1px   2px  5px   0px black;
+    -moz-box-shadow: inset  4px  10px 10px -10px white,
+                     inset -4px -10px 20px -10px black,
+                            1px   2px  5px   0px black;
+    box-shadow: inset  4px  10px 10px -10px white,
+                inset -4px -10px 20px -10px black,
+                       1px   2px  5px   0px black;
+  }
+  .navigation-dropdown-content {
+    position: absolute;
+    font-size: 24px;
+    right: 0px;
+    width: 200px;
+    border-style: solid;
+    border-width: 2px;
+    background-color: white;
+    border-radius: 6px;
+    padding-right: 1px;
+    padding-left: 1px;
+  }
+  .navigation-dropdown-content a {
+    color: black;
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    text-decoration: none;
+    display: block;
+    border-radius: 6px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    padding-right: 5px;
+  }
+  .navigation-dropdown-content a:hover {
+    background-color: rgb(65, 65, 65);
+    color: white;
+  }
+  .navigation-dropdown:hover .navigation-dropdown-button {
+    background-color: rgb(65, 65, 65);
+    color: white;
+  }
+  /* #endregion navigation 600px mobile */
+  /* #region about 600px mobile */
+  .about {
+    /* In order to not be covered by the navigation bar */
+    padding-top: 46px;
+  }
+  .about-parallax {
+    /*padding-top: 143px;*/
+    /*opacity: 0.80;*/
+    /* Image to be used */
+    background-image: url("img/office.jpg");
+    overflow: auto;
+
+    /* Set specific height */
+    min-height: 200px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  6px 10px 0px black,
+                inset 0px -6px 10px 0px black;
+  }
+  .parallax-opacity {
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(255,255,255,0.1);
+  }
+  .parallax-pretty {
+    font: 400 32px "Lato", sans-serif;
+    padding: 10px;
+    margin: auto;
+    margin-top: 53px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .about-statement {
+    text-align: justify;
+    margin: auto;
+    font: 400 22px/1.8 "Lato", sans-serif;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(65, 65, 65);;
+    background-color: white;
+  }
+  /* #endregion about 600px mobile */
+  /* #region services 600px mobile */
+  .services-parallax {
+    /* Image to be used */
+    background-image: url("img/services.jpg");
+
+    /* Set specific height */
+    min-height: 200px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  6px 10px 0px black,
+                inset 0px -6px 10px 0px black;
+  }
+  .services-pretty {
+    font: 400 32px "Lato", sans-serif;
+    padding: 10px;
+    margin: auto;
+    margin-top: 71px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .services-statement {
+    margin: auto;
+    font: 400 22px/1.8 "Lato", sans-serif;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(65, 65, 65);
+    background-color: white;
+  }
+  .horizonatal-list-container {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+  }
+  ul.services-list {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+  }
+  ul.services-list > li {
+    background-color: white;
+    list-style-type: none;
+    display: inline-block;
+    min-width: 200px;
+  }
+  ul.services-list > li > a {
+    display: inline-block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    color: rgb(65, 65, 65);;
+  }
+  button[name="services-button"] {
+    font: 400 22px/1.8 "Lato", sans-serif;
+    background-color: white;
+    border: none;
+    color: rgb(65, 65, 65);
+    text-decoration: none;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 8px;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  button:hover[name="services-button"] {
+    background-color: rgb(65, 65, 65);
+    color: white;
+  }
+  .service-modal-backdrop {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  .service-modal-content {
+    background-color: rgb(185, 185, 185);
+    margin: 2% auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 86%;
+    height: 90%;
+    overflow-y: scroll;
+    padding-right: 17px;
+    box-sizing: content-box;
+    border-radius: 6px;
+  }
+  .service-modal-close {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    /*border-radius: 6px;*/
+    border-radius: 14% / 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: white;
+  }
+  .service-modal-content > h2 {
+    margin: 0;
+    font-size: 32px;
+  }
+  .service-modal-content > p {
+    margin: auto;
+    font: 400 22px/1.8 "Lato", sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(65, 65, 65);
+  }
+  .service-modal-content > h3 {
+    margin: 0;
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    border-top-style: solid;
+    border-width: 2px;
+    border-color: black;
+  }
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .service-modal-close:hover,
+  .service-modal-close:focus {
+    color: white;
+    background-color: rgb(65, 65, 65);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .service-modal-images {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgb(185, 185, 185);
+    display: inline-block;
+  }
+  li.service-modal-images-crop {
+    min-width: 0;
+    width: 500px;
+    height: 375px;
+    margin-bottom: 4px;
+    list-style-type: none;
+  }
+  li.service-modal-images-crop > a {
+    padding: 0;
+    text-align: center;
+    left: 50%;
+    transform: translate(50%);
+  }
+  .service-modal-images-crop img {
+    height: 375px;
+    width: 500px;
+    object-fit: contain;
+  }
+  /* #endregion services 600px mobile */
+  /* #region safety 600px mobile */
+  .safety-parallax {
+    /* Image to be used */
+    background-image: url("img/hexBack.jpg");
+
+    /* Set specific height */
+    min-height: 200px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  6px 10px 0px black,
+                inset 0px -6px 10px 0px black;
+  }
+  .safety-pretty {
+    font: 400 32px "Lato", sans-serif;
+    padding: 10px;
+    margin: auto;
+    margin-top: 71px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .safety-statement {
+    margin: auto;
+    font: 400 22px/1.8 "Lato", sans-serif;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(65, 65, 65);;
+    background-color: white;
+  }
+  /* #endregion safety 600px mobile */
+  /* #region fleet 600px mobile */
+  .fleet-parallax {
+    /* Image to be used */
+    background-image: url("img/fleet.jpg");
+
+    /* Set specific height */
+    min-height: 200px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  6px 10px 0px black,
+                inset 0px -6px 10px 0px black;
+  }
+  .fleet-pretty {
+    font: 400 32px "Lato", sans-serif;
+    padding: 10px;
+    margin: auto;
+    margin-top: 71px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  ul.fleet-list {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+  }
+  .fleet-list > li {
+    background-color: #fff;
+    list-style-type: none;
+    display: inline-block;
+    font: 400 25px/1.8 "Lato", sans-serif;
+    min-width: 0;
+    width: 210px;
+    height: 260px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .fleet-list > li:hover {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .fleet-list > li > p {
+    margin: 0;
+    padding-bottom: 5px;
+  }
+  button[name="fleet-button"] {
+    background-color: white;
+    border: none;
+    color: #777;
+    text-decoration: none;
+    font: 400 25px/1.8 "Lato", sans-serif;
+    margin: 3px 0 0 0;
+    padding: 8px;
+    width: 204px;
+    height: 204px;
+    border-radius: 10px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    background-size: cover;
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px;
+  }
+  button:hover[name="fleet-button"] {
+    cursor: pointer;
+  }
+  .fleet-modal-backdrop {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  .fleet-modal-content {
+    background-color: rgb(185, 185, 185);
+    margin: 2% auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 86%;
+    height: 90%;
+    overflow-y: scroll;
+    padding-right: 17px;
+    box-sizing: content-box;
+    border-radius: 6px;
+  }
+  .fleet-modal-close {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    /*border-radius: 6px;*/
+    border-radius: 14% / 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: white;
+  }
+  .fleet-modal-close:hover,
+  .fleet-modal-close:focus {
+    color: white;
+    background-color: rgb(65, 65, 65);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /*  slider code from: 
+      https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/
+  */
+  .slider {
+    margin: auto;
+    width: 95%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  .slides {
+    height: 90%;
+    display: flex;
+    overflow-x: auto;
+    border-radius: 5px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+  }
+  .slides::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+  }
+  .slides::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .slides > div {
+    flex-shrink: 0;
+    width: 100%;
+    border-radius: 10px;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider > a {
+    display: inline-flex;
+    width: 3rem;
+    height: 3rem;
+    background: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 16px 0.8rem 0.2rem 0;
+    position: relative;
+    color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+  }
+  .slider > a:hover {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .slider > a:active {
+    top: 1px;
+  }
+  .slider > a:focus {
+    background: #000;
+    color: white;
+  }
+  .slide > a > img {
+    margin: 0;
+    padding: 0;
+    max-height: calc(100vh - 24vh);
+    /*overflow: hidden;*/
+    text-align: center;
+    background-color: #777;
+    border-radius: 2px;
+  }
+  .fleet-modal-images {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #777;
+  }
+  /* #endregion fleet 600px mobile */
+  /* #region contact 600px mobile */
+  .contact-parallax {
+    /* Image to be used */
+    background-image: url("img/contact.jpg");
+    overflow: auto;
+
+    /* Set specific height */
+    min-height: 200px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  6px 10px 0px black,
+                inset 0px -6px 10px 0px black;
+  }
+  .contact-title {
+    font: 400 32px "Lato", sans-serif;
+    padding: 10px;
+    margin: auto;
+    margin-top: 71px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .contact-information-area {
+    border: black;
+    border-bottom-style: solid;
+    border-width: 2px;
+  }
+  .contact-information-area > p {
+    font-size: 24px;
+    position: relative;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .contact-message-form {
+    text-align: center;
+  }
+  .contact-message-form > label > input:not(:last-child) {
+    width: 50%;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 2px;
+    text-align: center;
+    font: 400 22px/1.8 "Lato", sans-serif;
+  }
+  .message {
+    width: 80%;
+    height: 100px;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 2px;
+    text-align: center;
+    font: 400 22px/1.8 "Lato", sans-serif;
+    text-overflow: ellipsis;
+  }
+  .contact-submit-button {
+    -webkit-box-shadow: inset  4px  10px 10px -10px white,
+                        inset -4px -10px 20px -10px black,
+                               1px   2px  5px   0px black;
+    -moz-box-shadow: inset  4px  10px 10px -10px white,
+                     inset -4px -10px 20px -10px black,
+                            1px   2px  5px   0px black;
+    box-shadow: inset  4px  10px 10px -10px white,
+                inset -4px -10px 20px -10px black,
+                       1px   2px  5px   0px black;
+    background-color: rgb(230, 230, 230);
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    /*border-radius: 6px;*/
+    border-radius: 4% / 40%;
+    font-size: 24px;
+    padding: 4px 12px 4px 12px;
+  }
+  .contact-submit-button:hover {
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    background-color: rgb(65, 65, 65);
+    color: white;
+  }
+  .contact-submit-button:active {
+    background-color: rgb(65, 65, 65);
+    color: white;
+  }
+  .contact-backdrop {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+    overflow: hidden;
+  }
+  .contact-box {
+    position: fixed;
+    width: 60%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+  }
+  .contact-box > h3 {
+    font-size: 30px;
+    border-bottom-style: double;
+    padding-bottom: 10px;
+  }
+  .contact-box > p {
+    font-size: 24px;
+  }
+  .contact-box > button {
+    -webkit-box-shadow: inset  4px  10px 10px -10px white,
+                        inset -4px -10px 20px -10px black,
+                               1px   2px  5px   0px black;
+    -moz-box-shadow: inset  4px  10px 10px -10px white,
+                     inset -4px -10px 20px -10px black,
+                            1px   2px  5px   0px black;
+    box-shadow: inset  4px  10px 10px -10px white,
+                inset -4px -10px 20px -10px black,
+                       1px   2px  5px   0px black;
+    background-color: rgb(230, 230, 230);
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    /*border-radius: 6px;*/
+    border-radius: 4% / 40%;
+    font-size: 24px;
+    padding: 4px 12px 4px 12px;
+  }
+  .sent-box {
+    position: fixed;
+    width: 26%;
+    height: 8%;
+    top: 92%;
+    left: 74%;
+    background-color: #777;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .sent-box > p {
+    font-size: 2.3vh;
+    margin: 0;
+    padding-left: 4px;
+    padding-top: 4px;
+  }
+  .contact-info {
+    font-size: 24px;
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    border-style: solid;
+    border-width: 2px;
+  }
+  .contact-info > h3 {
+    font-size: 30px;
+    border-bottom-style: solid;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .contact-info > p {
+    padding-left: 10px;
+  }
+  .contact-info > p > span {
+    color: white;
+    user-select: none;
+  }
+  /* #endregion contact 600px mobile */
+  
+}
+@media all and (min-width: 768px) {
+  /* #region navigation 768px mobile */
+  .navigation {
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    padding-top: 4px;
+    background-color: #fff;
+    z-index: 1;
+    border-bottom-style: solid;
+    border-width: 2px;
+    border-bottom-color: rgb(0,0,0);
+    -webkit-box-shadow: 0px   3px  10px   0px black;
+    -moz-box-shadow: 0px   3px  10px   0px black;
+    box-shadow: 0px   3px  10px   0px black;
+    text-shadow: 1px 2px 2px rgba(0,0,0,0.5);
+  }
+  .navigation h1 {
+    font-size: 2.5em;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    padding-top: 6px;
+    text-align: center;
+  }
+  .navigation img {
+    position: fixed;
+    top: 6px;
+    left: 10px;
+    width: 130px;
+  }
+  .navigation-normal {
+    display: none;
+  }
+  .navigation-dropdown {
+    position: absolute;
+    display: inline-block;
+    text-align: right;
+    right: 20px;
+    top: 6px;
+  }
+  .navigation-dropdown-button {
+    color: rgb(0, 0, 0);
+    background-color: rgb(230, 230, 230);
+    border-style: solid;
+    border-color: rgb(0,0,0);
+    font-size: 32px;
+    /*border-radius: 6px;*/
+    border-radius: 20% / 50%;
+    border-width: 3px;
+    padding: 4px 12px 4px 12px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-box-shadow: inset  4px  10px 10px -10px white,
+                        inset -4px -10px 20px -10px black,
+                               1px   3px  5px   0px black;
+    -moz-box-shadow: inset  4px  10px 10px -10px white,
+                     inset -4px -10px 20px -10px black,
+                            1px   3px  5px   0px black;
+    box-shadow: inset  4px  10px 10px -10px white,
+                inset -4px -10px 20px -10px black,
+                       1px   3px  5px   0px black;
+  }
+  .navigation-dropdown-content {
+    position: absolute;
+    font-size: 32px;
+    right: 0px;
+    width: 225px;
+    border-style: solid;
+    border-width: 3px;
+    background-color: white;
+    border-radius: 8px;
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+  .navigation-dropdown-content > a {
+    color: black;
+    background-color: white;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  .navigation-dropdown-content a:hover {
+    background-color: rgb(65, 65, 65);
+    color: white;
+  }
+  .navigation-dropdown:hover .navigation-dropdown-button {
+    background-color: rgb(65, 65, 65);
+    color: white;
+  }
+  /* #endregion navigation 768px mobile */
+  /* #region about 768px mobile */
+  .about {
+    /* In order to not be covered by the navigation bar */
+    padding-top: 66px;
+  }
+  .about-parallax {
+    /*padding-top: 143px;*/
+    /*opacity: 0.80;*/
+    /* Image to be used */
+    overflow: auto;
+
+    /* Set specific height */
+    min-height: 250px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  8px 10px 0px black,
+                inset 0px -8px 10px 0px black;
+  }
+  .parallax-opacity {
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(255,255,255,0.1);
+  }
+  .parallax-pretty {
+    font: 400 50px "Lato", sans-serif;
+    padding: 15px;
+    margin: auto;
+    margin-top: 53px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .about-statement {
+    text-align: justify;
+    margin: auto;
+    font: 400 26px/1.8 "Lato", sans-serif;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(65, 65, 65);
+    background-color: white;
+  }
+  /* #endregion about 768px mobile */
+  /* #region services 768px mobile */
+  .services-parallax {
+    /* Image to be used */
+    /* Set specific height */
+    min-height: 250px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  8px 10px 0px black,
+                inset 0px -8px 10px 0px black;
+  }
+  .services-pretty {
+    font: 400 50px "Lato", sans-serif;
+    padding: 15px;
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .services-statement {
+    margin: auto;
+    font: 400 26px/1.8 "Lato", sans-serif;
+    padding-left: 35px;
+    padding-right: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(65, 65, 65);
+    background-color: white;
+  }
+  .horizonatal-list-container {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+  }
+  ul.services-list {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+  }
+  ul.services-list > li {
+    background-color: white;
+    list-style-type: none;
+    display: inline-block;
+    min-width: 10px;
+  }
+  ul.services-list > li > a {
+    display: inline-block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    color: rgb(65, 65, 65);;
+  }
+  button[name="services-button"] {
+    font: 400 26px/1.8 "Lato", sans-serif;
+    background-color: white;
+    border: none;
+    color: rgb(65, 65, 65);
+    text-decoration: none;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    padding: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 8px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset  4px  8px 10px -10px white,
+                        inset -4px -8px 20px -10px black,
+                               0px  2px  5px   0px black;
+    -moz-box-shadow: inset  4px  8px 10px -10px white,
+                     inset -4px -8px 20px -10px black,
+                            0px  2px  5px   0px black;
+    box-shadow: inset  4px  8px 10px -10px white,
+                inset -4px -8px 20px -10px black,
+                       1px  2px  5px   0px black;
+  }
+  button:hover[name="services-button"] {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    border-color: rgb(65, 65, 65);
+    text-shadow: 0px 0px 2px white;
+    -webkit-box-shadow: inset  4px  8px 10px -10px white,
+                        inset -4px -8px 20px -10px black;
+    -moz-box-shadow: inset  4px  8px 10px -10px white,
+                     inset -4px -8px 20px -10px black;
+    box-shadow: inset  4px  8px 10px -10px white,
+                inset -4px -8px 20px -10px black,
+                       0px  2px 8px   2px black;
+  }
+  .service-modal-backdrop {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  .service-modal-content {
+    background-color: rgb(185, 185, 185);
+    margin: 2% auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 86%;
+    height: 90%;
+    overflow-y: scroll;
+    padding-right: 17px;
+    box-sizing: content-box;
+    border-radius: 6px;
+  }
+  .service-modal-close {
+    z-index: 1;
+    position: absolute;
+    right: 7%;
+    top: 2.5%;
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    /*border-radius: 6px;*/
+    border-radius: 20% / 50%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    background-color: white;
+    -webkit-box-shadow: inset  4px  8px 10px -10px white,
+                        inset -4px -8px 20px -10px black;
+    -moz-box-shadow: inset  4px  8px 10px -10px white,
+                     inset -4px -8px 20px -10px black;
+    box-shadow: inset  4px  8px 10px -10px white,
+                inset -4px -8px 20px -10px black,
+                       0px  0px 8px   1px black;
+  }
+  .service-modal-content > h2 {
+    margin: 0;
+    font-size: 32px;
+  }
+  .service-modal-content > p {
+    margin: auto;
+    font: 400 26px/1.8 "Lato", sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(65, 65, 65);
+    text-align: justify;
+  }
+  .service-modal-content > h3 {
+    margin: 0;
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    border-top-style: solid;
+    border-width: 2px;
+    border-color: black;
+  }
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .service-modal-close:hover,
+  .service-modal-close:focus {
+    color: white;
+    background-color: rgb(65, 65, 65);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .service-modal-images {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgb(185, 185, 185);
+    
+    display: inline-block;
+  }
+  li.service-modal-images-crop {
+    background-color: black;
+    min-width: 0;
+    width: 600px;
+    height: 450px;
+    margin-bottom: 4px;
+    list-style-type: none;
+  }
+  li.service-modal-images-crop > a {
+    padding: 0;
+  }
+  .service-modal-images-crop img {
+    height: 450px;
+    width: 600px;
+    object-fit: contain;
+  }
+  /* #endregion services 768px mobile */
+  /* #region safety 768px mobile */
+  .safety-parallax {
+    /* Image to be used */
+
+    /* Set specific height */
+    min-height: 250px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  8px 10px 0px black,
+                inset 0px -8px 10px 0px black;
+  }
+  .safety-pretty {
+    font: 400 50px "Lato", sans-serif;
+    padding: 15px;
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .safety-statement {
+    margin: auto;
+    font: 400 26px/1.8 "Lato", sans-serif;
+    padding-left: 35px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(65, 65, 65);
+    background-color: white;
+  }
+  /* #endregion safety 768px mobile */
+  /* #region fleet 768px mobile */
+  .fleet-parallax {
+    /* Image to be used */
+    /* Set specific height */
+    min-height: 250px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  8px 10px 0px black,
+                inset 0px -8px 10px 0px black;
+  }
+  .fleet-pretty {
+    font: 400 50px "Lato", sans-serif;
+    padding: 15px;
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  ul.fleet-list {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+  }
+  .fleet-list > li {
+    background-color: #fff;
+    list-style-type: none;
+    display: inline-block;
+    font: 400 25px/1.8 "Lato", sans-serif;
+    min-width: 0;
+    width: 350px;
+    height: 407px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .fleet-list > li:hover {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    text-shadow: 0px 0px 2px black,
+                 0px 0px 4px white;
+  }
+  .fleet-list > li > p {
+    font-size: 32px;
+    margin: 0;
+    padding-bottom: 0px;
+  }
+  button[name="fleet-button"] {
+    background-color: white;
+    border: none;
+    color: #777;
+    text-decoration: none;
+    font: 400 25px/1.8 "Lato", sans-serif;
+    margin: 3px 0 0 0;
+    padding: 8px;
+    width: 346px;
+    height: 345px;
+    border-radius: 10px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    background-size: cover;
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px;
+  }
+  button:hover[name="fleet-button"] {
+    cursor: pointer;
+  }
+  .fleet-modal-backdrop {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  .fleet-modal-content {
+    background-color: rgb(185, 185, 185);
+    margin: 2% auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 86%;
+    height: 90%;
+    overflow-y: scroll;
+    padding-right: 17px;
+    box-sizing: content-box;
+    border-radius: 6px;
+  }
+  .fleet-modal-close {
+    z-index: 1;
+    position: absolute;
+    right: 7%;
+    top: 2.5%;
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    /*border-radius: 6px;*/
+    border-radius: 20% / 50%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    background-color: white;
+    text-shadow: 0px 0px 1px black,
+                 0px 0px 5px white;
+    -webkit-box-shadow: inset  4px  8px 10px -10px white,
+                        inset -4px -8px 20px -10px black;
+    -moz-box-shadow: inset  4px  8px 10px -10px white,
+                     inset -4px -8px 20px -10px black;
+    box-shadow: inset  4px  8px 10px -10px white,
+                inset -4px -8px 20px -10px black,
+                       0px  0px 8px   1px black;
+  }
+  .fleet-modal-close:hover,
+  .fleet-modal-close:focus {
+    color: white;
+    background-color: rgb(65, 65, 65);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /*  slider code from: 
+      https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/
+  */
+  .slider {
+    margin: auto;
+    width: 95%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  .slides {
+    height: 90%;
+    display: flex;
+    overflow-x: auto;
+    border-radius: 5px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+  }
+  .slides::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+  }
+  .slides::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .slides > div {
+    flex-shrink: 0;
+    width: 100%;
+    border-radius: 10px;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider > a {
+    display: inline-flex;
+    width: 3rem;
+    height: 3rem;
+    background: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 16px 0.8rem 0.2rem 0;
+    position: relative;
+    color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    -webkit-box-shadow: inset  4px  8px 10px -10px white,
+                        inset -4px -8px 20px -10px black,
+                               0px  0px  3px   1px black;
+    -moz-box-shadow: inset  4px  8px 10px -10px white,
+                     inset -4px -8px 20px -10px black,
+                            0px  0px  3px   1px black;
+    box-shadow: inset  4px  8px 10px -10px white,
+                inset -4px -8px 20px -10px black,
+                       0px  0px  3px   1px black;
+  }
+  .slider > a:hover {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    text-shadow: 0px 0px 6px white;
+    -webkit-box-shadow: inset  4px  8px 10px -10px white,
+                        inset -4px -8px 20px -10px black,
+                               0px  0px  3px   1px black;
+    -moz-box-shadow: inset  4px  8px 10px -10px white,
+                     inset -4px -8px 20px -10px black,
+                            0px  0px  3px   1px black;
+    box-shadow: inset  4px  8px 10px -10px black,
+                inset  4px  8px 20px -10px white,
+                       0px  0px  3px   1px white;
+  }
+  .slider > a:active {
+    top: 1px;
+  }
+  .slider > a:focus {
+    background: #000;
+    color: white;
+  }
+  .slide > a > img {
+    margin: 0;
+    padding: 0;
+    max-height: calc(100vh - 24vh);
+    /*overflow: hidden;*/
+    text-align: center;
+    background-color: #777;
+    border-radius: 2px;
+  }
+  .fleet-modal-images {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #777;
+  }
+  /* #endregion fleet 768px mobile */
+  /* #region contact 600px mobile */
+  .contact-parallax {
+    overflow: auto;
+
+    /* Set specific height */
+    min-height: 250px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  6px 10px 0px black,
+                inset 0px -6px 10px 0px black;
+  }
+  .contact-title {
+    font: 400 50px "Lato", sans-serif;
+    padding: 15px;
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .contact-information-area {
+    border: black;
+    border-bottom-style: solid;
+    border-width: 2px;
+  }
+  .contact-information-area > p {
+    font-size: 26px;
+    position: relative;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%);
+    text-shadow: 0px -1px 20px rgba(0,0,0,0.2);
+  }
+  .contact-message-form {
+    text-align: center;
+  }
+  .contact-message-form > label > input:not(:last-child) {
+    width: 50%;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 2px;
+    text-align: center;
+    font: 400 26px/1.8 "Lato", sans-serif;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    box-shadow: inset 2px 2px 5px 1px rgba(0,0,0,0.5);
+  }
+  .message {
+    width: 80%;
+    height: 100px;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 2px;
+    text-align: center;
+    font: 400 26px/1.8 "Lato", sans-serif;
+    text-overflow: ellipsis;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    box-shadow: inset 2px 2px 5px 1px rgba(0,0,0,0.5);
+  }
+  .contact-submit-button {
+    -webkit-box-shadow: inset  4px  10px 10px -10px white,
+                        inset -4px -10px 20px -10px black,
+                               1px   2px  5px   0px black;
+    -moz-box-shadow: inset  4px  10px 10px -10px white,
+                     inset -4px -10px 20px -10px black,
+                            1px   2px  5px   0px black;
+    box-shadow: inset  4px  10px 10px -10px white,
+                inset -4px -10px 20px -10px black,
+                       1px   2px  5px   0px black;
+    background-color: rgb(230, 230, 230);
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    /*border-radius: 6px;*/
+    border-radius: 10% / 50%;
+    font-size: 26px;
+    padding: 4px 12px 4px 12px;
+  }
+  .contact-submit-button:hover {
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    background-color: rgb(65, 65, 65);
+    color: white;
+  }
+  .contact-submit-button:active {
+    background-color: rgb(65, 65, 65);
+    color: white;
+  }
+  .contact-backdrop {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+    overflow: hidden;
+  }
+  .contact-box {
+    position: fixed;
+    width: 60%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+  }
+  .contact-box > h3 {
+    font-size: 30px;
+    border-bottom-style: double;
+    padding-bottom: 10px;
+  }
+  .contact-box > p {
+    font-size: 24px;
+  }
+  .contact-box > button {
+    -webkit-box-shadow: inset  4px  10px 10px -10px white,
+                        inset -4px -10px 20px -10px black,
+                               1px   2px  5px   0px black;
+    -moz-box-shadow: inset  4px  10px 10px -10px white,
+                     inset -4px -10px 20px -10px black,
+                            1px   2px  5px   0px black;
+    box-shadow: inset  4px  10px 10px -10px white,
+                inset -4px -10px 20px -10px black,
+                       1px   2px  5px   0px black;
+    background-color: rgb(230, 230, 230);
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    /*border-radius: 6px;*/
+    border-radius: 4% / 40%;
+    font-size: 24px;
+    padding: 4px 12px 4px 12px;
+  }
+  .sent-box {
+    position: fixed;
+    width: 26%;
+    height: 8%;
+    top: 92%;
+    left: 74%;
+    background-color: #777;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .sent-box > p {
+    font-size: 2.3vh;
+    margin: 0;
+    padding-left: 4px;
+    padding-top: 4px;
+  }
+  .contact-info {
+    font-size: 24px;
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    border-style: solid;
+    border-width: 2px;
+  }
+  .contact-info > h3 {
+    font-size: 30px;
+    border-bottom-style: solid;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .contact-info > p {
+    padding-left: 10px;
+  }
+  /* #endregion contact 768px mobile */
+}
+@media all and (min-width: 992px) {
+  /* #region navigation 768px mobile */
+  .navigation {
+    position: fixed;
+    top: 0;
+    height: 65px;
+    width: 100%;
+    padding-top: 9px;
+    background-color: #fff;
+    z-index: 1;
+    border-bottom-style: solid;
+    border-width: 3px;
+    border-bottom-color: black;
+    -webkit-box-shadow: 0px   3px  10px   0px black;
+    -moz-box-shadow: 0px   3px  10px   0px black;
+    box-shadow: 0px   3px  10px   0px black;
+    text-shadow: 0px 0px 8px rgba(0,0,0,0.6);
+  }
+  .navigation h1 {
+    font-size: 3em;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    padding-top: 4px;
+    padding-left: 10px;
+    text-align: center;
+  }
+  .navigation img {
+    position: absolute;
+    top: 6px;
+    width: 150px;
+    transform: translate(30px);
+  }
+  .navigation-dropdown {
+    position: absolute;
+    display: inline-block;
+    text-align: right;
+    right: 5%;
+    top: 14px;
+  }
+  .navigation-dropdown-button {
+    color: rgb(0, 0, 0);
+    background-color: rgb(230, 230, 230);
+    border-style: solid;
+    border-color: rgb(0,0,0);
+    font-size: 32px;
+    /*border-radius: 6px;*/
+    border-radius: 15% / 40%;
+    border-width: 3px;
+    padding: 4px 20px 4px 20px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    text-shadow: 0px 0px 1px black;
+    -webkit-box-shadow: inset  0px  10px 10px -10px black,
+                        inset  0px -10px 10px -10px black,
+                               0px   0px  5px   1px black;
+    -moz-box-shadow: inset  0px  10px 10px -10px black,
+                     inset  0px -10px 10px -10px black,
+                            0px   0px  5px   1px black;
+    box-shadow: inset  0px  10px 10px -10px black,
+                inset  0px -10px 10px -10px black,
+                       0px   0px  5px   1px black;
+  }
+  .navigation-dropdown-content {
+    position: absolute;
+    font-size: 32px;
+    right: -48px;
+    width: 225px;
+    border-style: solid;
+    border-width: 3px;
+    background-color: white;
+    border-radius: 8px;
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+  .navigation-dropdown-content > a {
+    color: black;
+    background-color: white;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    -webkit-box-shadow: inset 0px  1px 10px 2px rgba(0,0,0,0.3),
+                        inset 0px -1px 10px 2px rgba(0,0,0,0.3),
+                              0px  0px  5px 1px black;
+    -moz-box-shadow: inset 0px  1px 10px 2px rgba(0,0,0,0.3),
+                     inset 0px -1px 10px 2px rgba(0,0,0,0.3),
+                           0px  0px  5px 1px black;
+    box-shadow: inset 0px  1px 10px 2px rgba(0,0,0,0.3),
+                inset 0px -1px 10px 2px rgba(0,0,0,0.3),
+                      0px  0px  5px 1px black;
+  }
+  .navigation-dropdown-content a:hover {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    box-shadow: 0px 0px 10px 3px black;
+    text-shadow: 0px 0px 5px white;
+  }
+  .navigation-dropdown:hover .navigation-dropdown-button {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    -webkit-box-shadow: inset  0px  10px 10px -10px black,
+                        inset  0px -10px 10px -10px black,
+                               0px   0px  5px   1px black;
+    -moz-box-shadow: inset  0px  10px 10px -10px black,
+                     inset  0px -10px 10px -10px black,
+                            0px   0px  5px   1px black;
+    box-shadow: inset  0px  10px 10px -10px white,
+                inset  0px -10px 10px -10px white,
+                       0px   0px  5px   1px white;
+  }
+  /* #endregion navigation 768px mobile */
+  /* #region about 768px mobile */
+  .about {
+    /* In order to not be covered by the navigation bar */
+    padding-top: 77px;
+  }
+  .about-parallax {
+    /*padding-top: 143px;*/
+    /*opacity: 0.80;*/
+    overflow: auto;
+
+    /* Set specific height */
+    min-height: 250px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  8px 10px 0px black,
+                inset 0px -8px 10px 0px black;
+  }
+  .parallax-opacity {
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(255,255,255,0.1);
+  }
+  .parallax-pretty {
+    font: 400 50px "Lato", sans-serif;
+    padding: 15px;
+    margin: auto;
+    margin-top: 53px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .about-statement {
+    text-align: justify;
+    margin: auto;
+    font: 400 26px/1.8 "Lato", sans-serif;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(65, 65, 65);
+    background-color: white;
+  }
+  /* #endregion about 768px mobile */
+  /* #region services 768px mobile */
+  .services-parallax {
+    /* Image to be used */
+
+    /* Set specific height */
+    min-height: 250px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  8px 10px 0px black,
+                inset 0px -8px 10px 0px black;
+  }
+  .services-pretty {
+    font: 400 50px "Lato", sans-serif;
+    padding: 15px;
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .services-statement {
+    margin: auto;
+    font: 400 26px/1.8 "Lato", sans-serif;
+    padding-left: 35px;
+    padding-right: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(65, 65, 65);
+    background-color: white;
+  }
+  .horizonatal-list-container {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+  }
+  ul.services-list {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+  }
+  ul.services-list > li {
+    background-color: white;
+    list-style-type: none;
+    display: inline-block;
+    min-width: 10px;
+  }
+  ul.services-list > li > a {
+    display: inline-block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    color: rgb(65, 65, 65);;
+  }
+  button[name="services-button"] {
+    font: 400 26px/1.8 "Lato", sans-serif;
+    background-color: white;
+    border: none;
+    color: rgb(65, 65, 65);
+    text-decoration: none;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    padding: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 8px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset  4px  8px 10px -10px white,
+                        inset -4px -8px 20px -10px black,
+                               0px  2px  5px   0px black;
+    -moz-box-shadow: inset  4px  8px 10px -10px white,
+                     inset -4px -8px 20px -10px black,
+                            0px  2px  5px   0px black;
+    box-shadow: inset  4px  8px 10px -10px white,
+                inset -4px -8px 20px -10px black,
+                       1px  2px  5px   0px black;
+  }
+  button:hover[name="services-button"] {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    border-color: rgb(65, 65, 65);
+    text-shadow: 0px 0px 2px white;
+    -webkit-box-shadow: inset  4px  8px 10px -10px white,
+                        inset -4px -8px 20px -10px black;
+    -moz-box-shadow: inset  4px  8px 10px -10px white,
+                     inset -4px -8px 20px -10px black;
+    box-shadow: inset  4px  8px 10px -10px white,
+                inset -4px -8px 20px -10px black,
+                       0px  2px 8px   2px black;
+  }
+  .service-modal-backdrop {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  .service-modal-content {
+    background-color: rgb(185, 185, 185);
+    margin: 2% auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 86%;
+    height: 90%;
+    overflow-y: scroll;
+    padding-right: 17px;
+    box-sizing: content-box;
+    border-radius: 6px;
+  }
+  .service-modal-close {
+    z-index: 1;
+    position: absolute;
+    right: 7%;
+    top: 2.5%;
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    /*border-radius: 6px;*/
+    border-radius: 20% / 50%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    background-color: white;
+    -webkit-box-shadow: inset  4px  8px 10px -10px white,
+                        inset -4px -8px 20px -10px black;
+    -moz-box-shadow: inset  4px  8px 10px -10px white,
+                     inset -4px -8px 20px -10px black;
+    box-shadow: inset  4px  8px 10px -10px white,
+                inset -4px -8px 20px -10px black,
+                       0px  0px 8px   1px black;
+  }
+  .service-modal-content > h2 {
+    margin: 0;
+    font-size: 32px;
+  }
+  .service-modal-content > p {
+    margin: auto;
+    font: 400 26px/1.8 "Lato", sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(65, 65, 65);
+    text-align: justify;
+  }
+  .service-modal-content > h3 {
+    margin: 0;
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    border-top-style: solid;
+    border-width: 2px;
+    border-color: black;
+  }
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .service-modal-close:hover,
+  .service-modal-close:focus {
+    color: white;
+    background-color: rgb(65, 65, 65);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .service-modal-images {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgb(185, 185, 185);
+    
+    display: inline-block;
+  }
+  li.service-modal-images-crop {
+    background-color: black;
+    min-width: 0;
+    width: 600px;
+    height: 450px;
+    margin-bottom: 4px;
+    list-style-type: none;
+  }
+  li.service-modal-images-crop > a {
+    padding: 0;
+  }
+  .service-modal-images-crop img {
+    height: 450px;
+    width: 600px;
+    object-fit: contain;
+  }
+  /* #endregion services 768px mobile */
+  /* #region safety 768px mobile */
+  .safety-parallax {
+    /* Image to be used */
+    /* Set specific height */
+    min-height: 250px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  8px 10px 0px black,
+                inset 0px -8px 10px 0px black;
+  }
+  .safety-pretty {
+    font: 400 50px "Lato", sans-serif;
+    padding: 15px;
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .safety-statement {
+    margin: auto;
+    font: 400 26px/1.8 "Lato", sans-serif;
+    padding-left: 35px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(65, 65, 65);
+    background-color: white;
+  }
+  /* #endregion safety 768px mobile */
+  /* #region fleet 768px mobile */
+  .fleet-parallax {
+    /* Image to be used */
+
+    /* Set specific height */
+    min-height: 250px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  8px 10px 0px black,
+                inset 0px -8px 10px 0px black;
+  }
+  .fleet-pretty {
+    font: 400 50px "Lato", sans-serif;
+    padding: 15px;
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  ul.fleet-list {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+  }
+  .fleet-list > li {
+    background-color: #fff;
+    list-style-type: none;
+    display: inline-block;
+    font: 400 25px/1.8 "Lato", sans-serif;
+    min-width: 0;
+    width: 350px;
+    height: 407px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .fleet-list > li:hover {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    text-shadow: 0px 0px 2px black,
+                 0px 0px 4px white;
+  }
+  .fleet-list > li > p {
+    font-size: 32px;
+    margin: 0;
+    padding-bottom: 0px;
+  }
+  button[name="fleet-button"] {
+    background-color: white;
+    border: none;
+    color: #777;
+    text-decoration: none;
+    font: 400 25px/1.8 "Lato", sans-serif;
+    margin: 3px 0 0 0;
+    padding: 8px;
+    width: 346px;
+    height: 345px;
+    border-radius: 10px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    background-size: cover;
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px;
+  }
+  button:hover[name="fleet-button"] {
+    cursor: pointer;
+  }
+  .fleet-modal-backdrop {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  .fleet-modal-content {
+    background-color: rgb(185, 185, 185);
+    margin: 2% auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 86%;
+    height: 90%;
+    overflow-y: scroll;
+    padding-right: 17px;
+    box-sizing: content-box;
+    border-radius: 6px;
+  }
+  .fleet-modal-close {
+    z-index: 1;
+    position: absolute;
+    right: 7%;
+    top: 2.5%;
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    /*border-radius: 6px;*/
+    border-radius: 20% / 50%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    background-color: white;
+    text-shadow: 0px 0px 1px black,
+                 0px 0px 5px white;
+    -webkit-box-shadow: inset  4px  8px 10px -10px white,
+                        inset -4px -8px 20px -10px black;
+    -moz-box-shadow: inset  4px  8px 10px -10px white,
+                     inset -4px -8px 20px -10px black;
+    box-shadow: inset  4px  8px 10px -10px white,
+                inset -4px -8px 20px -10px black,
+                       0px  0px 8px   1px black;
+  }
+  .fleet-modal-close:hover,
+  .fleet-modal-close:focus {
+    color: white;
+    background-color: rgb(65, 65, 65);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /*  slider code from: 
+      https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/
+  */
+  .slider {
+    margin: auto;
+    width: 95%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  .slides {
+    height: 90%;
+    display: flex;
+    overflow-x: auto;
+    border-radius: 5px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+  }
+  .slides::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+  }
+  .slides::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .slides > div {
+    flex-shrink: 0;
+    width: 100%;
+    border-radius: 10px;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider > a {
+    display: inline-flex;
+    width: 3rem;
+    height: 3rem;
+    background: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 16px 0.8rem 0.2rem 0;
+    position: relative;
+    color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    -webkit-box-shadow: inset  4px  8px 10px -10px white,
+                        inset -4px -8px 20px -10px black,
+                               0px  0px  3px   1px black;
+    -moz-box-shadow: inset  4px  8px 10px -10px white,
+                     inset -4px -8px 20px -10px black,
+                            0px  0px  3px   1px black;
+    box-shadow: inset  4px  8px 10px -10px white,
+                inset -4px -8px 20px -10px black,
+                       0px  0px  3px   1px black;
+  }
+  .slider > a:hover {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    text-shadow: 0px 0px 6px white;
+    -webkit-box-shadow: inset  4px  8px 10px -10px white,
+                        inset -4px -8px 20px -10px black,
+                               0px  0px  3px   1px black;
+    -moz-box-shadow: inset  4px  8px 10px -10px white,
+                     inset -4px -8px 20px -10px black,
+                            0px  0px  3px   1px black;
+    box-shadow: inset  4px  8px 10px -10px black,
+                inset  4px  8px 20px -10px white,
+                       0px  0px  3px   1px white;
+  }
+  .slider > a:active {
+    top: 1px;
+  }
+  .slider > a:focus {
+    background: #000;
+    color: white;
+  }
+  .slide > a > img {
+    margin: 0;
+    padding: 0;
+    max-height: calc(100vh - 24vh);
+    /*overflow: hidden;*/
+    text-align: center;
+    background-color: #777;
+    border-radius: 2px;
+  }
+  .fleet-modal-images {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #777;
+  }
+  /* #endregion fleet 768px mobile */
+  /* #region contact 600px mobile */
+  .contact-parallax {
+    /* Image to be used */
+    overflow: auto;
+
+    /* Set specific height */
+    min-height: 250px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  6px 10px 0px black,
+                inset 0px -6px 10px 0px black;
+  }
+  .contact-title {
+    font: 400 50px "Lato", sans-serif;
+    padding: 15px;
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .contact-information-area {
+    border: black;
+    border-bottom-style: solid;
+    border-width: 2px;
+  }
+  .contact-information-area > p {
+    font-size: 26px;
+    position: relative;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%);
+    text-shadow: 0px -1px 20px rgba(0,0,0,0.2);
+  }
+  .contact-message-form {
+    text-align: center;
+  }
+  .contact-message-form > label > input:not(:last-child) {
+    width: 50%;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 2px;
+    text-align: center;
+    font: 400 26px/1.8 "Lato", sans-serif;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    box-shadow: inset 2px 2px 5px 1px rgba(0,0,0,0.5);
+  }
+  .message {
+    width: 80%;
+    height: 100px;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 2px;
+    text-align: center;
+    font: 400 26px/1.8 "Lato", sans-serif;
+    text-overflow: ellipsis;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    box-shadow: inset 2px 2px 5px 1px rgba(0,0,0,0.5);
+  }
+  .contact-submit-button {
+    -webkit-box-shadow: inset  4px  10px 10px -10px white,
+                        inset -4px -10px 20px -10px black,
+                               1px   2px  5px   0px black;
+    -moz-box-shadow: inset  4px  10px 10px -10px white,
+                     inset -4px -10px 20px -10px black,
+                            1px   2px  5px   0px black;
+    box-shadow: inset  4px  10px 10px -10px white,
+                inset -4px -10px 20px -10px black,
+                       1px   2px  5px   0px black;
+    background-color: rgb(230, 230, 230);
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    /*border-radius: 6px;*/
+    border-radius: 10% / 50%;
+    font-size: 26px;
+    padding: 4px 12px 4px 12px;
+  }
+  .contact-submit-button:hover {
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    background-color: rgb(65, 65, 65);
+    color: white;
+  }
+  .contact-submit-button:active {
+    background-color: rgb(65, 65, 65);
+    color: white;
+  }
+  .contact-backdrop {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+    overflow: hidden;
+  }
+  .contact-box {
+    position: fixed;
+    width: 60%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+  }
+  .contact-box > h3 {
+    font-size: 30px;
+    border-bottom-style: double;
+    padding-bottom: 10px;
+  }
+  .contact-box > p {
+    font-size: 24px;
+  }
+  .contact-box > button {
+    -webkit-box-shadow: inset  4px  10px 10px -10px white,
+                        inset -4px -10px 20px -10px black,
+                               1px   2px  5px   0px black;
+    -moz-box-shadow: inset  4px  10px 10px -10px white,
+                     inset -4px -10px 20px -10px black,
+                            1px   2px  5px   0px black;
+    box-shadow: inset  4px  10px 10px -10px white,
+                inset -4px -10px 20px -10px black,
+                       1px   2px  5px   0px black;
+    background-color: rgb(230, 230, 230);
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    /*border-radius: 6px;*/
+    border-radius: 4% / 40%;
+    font-size: 24px;
+    padding: 4px 12px 4px 12px;
+  }
+  .sent-box {
+    position: fixed;
+    width: 26%;
+    height: 8%;
+    top: 92%;
+    left: 74%;
+    background-color: #777;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .sent-box > p {
+    font-size: 2.3vh;
+    margin: 0;
+    padding-left: 4px;
+    padding-top: 4px;
+  }
+  .contact-info {
+    font-size: 24px;
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    border-style: solid;
+    border-width: 2px;
+  }
+  .contact-info > h3 {
+    font-size: 30px;
+    border-bottom-style: solid;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .contact-info > p {
+    padding-left: 10px;
+  }
+  /* #endregion contact 768px mobile */
+}
+@media all and (min-width: 1130px) {
+  /* #region navigation 1130px mobile */
+  .navigation {
+    background-color: #f0f0f0;
+  }
+  .navigation h1 {
+    margin: 0px 0px 0px 0px;
+    padding-top: 4px;
+    padding-left: 10px;
+    text-align: left;
+  }
+  .navigation img {
+    top: 5px;
+    width: 150px;
+    transform: translate(546px);
+    box-shadow: 0px -3px 10px 4px rgb(250, 250, 250),
+                0px -6px 10px 8px rgb(245,245,245);
+  }
+  .navigation-normal {
+    position: fixed;
+    display: inline;
+    right: 0px;
+    top: 28px;
+    width: 418px;
+    font-size: 22px;
+  }
+  .navigation-normal a {
+    text-decoration: none;
+    color: #353636;
+    padding: 10px 4px 10px 4px;
+    margin: 0 2px 0 2px;
+    border-style: solid;
+    border-color: #353636;
+    border-radius: 20%/50%;
+    background-color: #f0f0f0;
+    transition-duration: 0.3s;
+  }
+  .navigation-normal a:hover {
+    color: white;
+    background-color: rgba(0,0,0,0.9);
+    border-radius: 20px;
+    text-shadow: 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119);
+    box-shadow: inset 0px 0px 10px 1px rgb(100, 116, 119);
+    transition-duration: 0.3s;
+    border-color: rgba(0,0,0,0.2);
+  }
+  .navigation-dropdown{
+    display: none;
+  }
+  /* #endregion navigation 1130px mobile */
+  /* #region about 1130px mobile */
+  .about {
+    /* In order to not be covered by the navigation bar */
+    padding-top: 77px;
+  }
+  .about-parallax {
+    min-height: 600px;
+  }
+  .about-parallax-opacity {
+    height: 600px;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(242,133,0,0.1);
+    transition-duration: 0.3s;
+  }
+  .parallax-opacity {
+    height: 300px;
+    background-color: rgba(242,133,0,0.1);
+    transition-duration: 0.3s;
+  }
+  .about-parallax-pretty {
+    font: 400 50px "Lato", sans-serif;
+    padding: 15px;
+    margin: auto;
+    margin-top: 230px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #f0f0f0;
+    width: 55%;
+    text-shadow: 1px 1px 1px 1px #353636;
+    border-radius: 6px;
+    transition-duration: 0.3s;
+  }
+  .about-parallax-opacity:hover > .about-parallax-pretty {
+    text-shadow: 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.7),
+                0px 0px 10px 1px rgb(100, 116, 119);
+    background-color: rgba(0,0,0,0.9);
+    cursor: none;
+    color: white;
+    transition-duration: 0.3s;
+  }
+  .about-statement {
+    font: 400 30px/1.8 "Lato", sans-serif;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #f0f0f0;
+    color: #353636;
+  }
+  /* #endregion about 1130px mobile */
+  /* #region services 1130px mobile */
+  .services {
+    background-color: #f0f0f0;
+  }
+  .services-parallax {
+    min-height: 300px;
+    box-shadow: inset 0px  8px 10px 0px black,
+                inset 0px -8px 10px 0px black;
+  }
+  .services-parallax-opacity {
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(242,133,0,0.1);
+    transition-duration: 0.3s;
+  }
+  .services-pretty {
+    margin-top: 100px;
+    color: #f0f0f0;
+    width: 50%;
+    text-shadow: 1px 1px 1px 1px #353636;
+    transition-duration: 0.3s;
+  }
+  .services-parallax-opacity:hover > .services-pretty {
+    text-shadow: 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.7),
+                0px 0px 10px 1px rgb(100, 116, 119);
+    background-color: rgba(0,0,0,0.9);
+    cursor: none;
+    color: white;
+    transition-duration: 0.3s;
+  }
+  .services-pretty:hover {
+    cursor: none;
+    transition-duration: 0.3s;
+  }
+  .services-statement {
+    font: 400 30px/1.8 "Lato", sans-serif;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #f0f0f0;
+    color: #353636;
+  }
+  .horizonatal-list-container {
+    background-color: #f0f0f0;
+  }
+  ul.services-list > li {
+    background-color: #f0f0f0;
+  }
+  ul.services-list > li > a {
+    display: inline-block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    color: #353636;
+  }
+  button[name="services-button"] {
+    font: 400 30px/1.8 "Lato", sans-serif;
+    color: #353636;
+    border-radius: 10px;
+    text-shadow: none;
+    box-shadow: none;
+  }
+  button:hover[name="services-button"] {
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    border-color: rgba(0,0,0,0.2);
+    text-shadow: 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119);
+    -webkit-box-shadow: inset  0px  0px 10px 1px rgb(100, 116, 119);
+    -moz-box-shadow: inset  0px  0px 10px 1px rgb(100, 116, 119);
+    box-shadow: inset  0px  0px 10px 1px rgb(100, 116, 119);
+    transition-duration: 0.3s;
+  }
+  .service-modal-content {
+    background-color: #f0f0f0;
+    position: absolute;
+    margin: 0;
+    padding: 2.5%;
+    border: 1px solid #353636;
+    width: 86%;
+    height: 90%;
+    left: 4%;
+    top: 2%;
+    border-radius: 8px;
+    border-width: 3px;
+    box-shadow: 0px 0px 40px 1px rgb(100, 116, 119);
+  }
+  .service-modal-close {
+    position: fixed;
+    right: 5.6%;
+    color: #353636;
+    font-weight: bold;
+    border-radius: 0px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-color: rgba(0,0,0,0.8);
+    box-shadow: none;
+  }
+  .service-modal-close:hover,
+  .service-modal-close:focus {
+    color: white;
+    background-color: rgba(0,0,0,0.9);
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119);
+    box-shadow: inset 0px 0px 10px 1px rgb(100, 116, 119);
+  }
+  .service-modal-content > h2 {
+    margin: 0;
+    font-size: 40px;
+    color: #353636;
+  }
+  .service-modal-content > p {
+    text-align: justify;
+    margin: auto;
+    font: 400 30px/1.8 "Lato", sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #353636;
+    text-align: justify;
+  }
+  .service-modal-content > h3 {
+    margin: 0;
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    border-top-style: solid;
+    border-width: 2px;
+    border-color: #353636;
+    color: #353636;
+  }
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .service-modal-images {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #f0f0f0;
+    
+    display: inline-block;
+  }
+  li.service-modal-images-crop {
+    background-color: #353636;
+    min-width: 0;
+    width: 400px;
+    height: 300px;
+    margin-bottom: 4px;
+    list-style-type: none;
+  }
+  li.service-modal-images-crop > a {
+    padding: 0;
+  }
+  .service-modal-images-crop img {
+    height: 300px;
+    width: 400px;
+    object-fit: contain;
+  }
+  /* #endregion services 768px mobile */
+  /* #region safety 1130px mobile */
+  .safety-parallax {
+    min-height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  8px 10px 0px black,
+                inset 0px -8px 10px 0px black;
+  }
+  .safety-pretty {
+    font: 400 50px "Lato", sans-serif;
+    padding: 15px;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #f0f0f0;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px #353636;
+    border-radius: 6px;
+    transition-duration: 0.3s;
+  }
+  .safety-pretty:hover {
+    cursor: none;
+    transition-duration: 0.3s;
+  }
+  .parallax-opacity:hover > .safety-pretty {
+    text-shadow: 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.7),
+                0px 0px 10px 1px rgb(100, 116, 119);
+    background-color: rgba(0,0,0,0.9);
+    cursor: none;
+    color: white;
+    transition-duration: 0.3s;
+  }
+  .safety-statement {
+    margin: auto;
+    font: 400 30px/1.8 "Lato", sans-serif;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #353636;
+    background-color: #f0f0f0;
+  }
+  /* #endregion safety 768px mobile */
+  /* #region fleet 1130px mobile */
+  .fleet-parallax {
+    min-height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  8px 10px 0px black,
+                inset 0px -8px 10px 0px black;
+  }
+  .fleet-pretty {
+    font: 400 50px "Lato", sans-serif;
+    padding: 15px;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #f0f0f0;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px #353636;
+    border-radius: 6px;
+    transition-duration: 0.3s;
+  }
+  .fleet-pretty:hover {
+    cursor: none;
+    transition-duration: 0.3s;
+  }
+  .parallax-opacity:hover > .fleet-pretty {
+    text-shadow: 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.7),
+                0px 0px 10px 1px rgb(100, 116, 119);
+    background-color: rgba(0,0,0,0.9);
+    cursor: none;
+    color: white;
+    transition-duration: 0.3s;
+  }
+  ul.fleet-list {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #f0f0f0;
+  }
+  .fleet-list > li {
+    background-color: #f0f0f0;
+    list-style-type: none;
+    display: inline-block;
+    font: 400 30px/1.8 "Lato", sans-serif;
+    min-width: 0;
+    width: 400px;
+    height: 405px;
+    margin: 10px;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+  }
+  .fleet-list > li:hover {
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    text-shadow: 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119);
+  }
+  .fleet-list > li > button {
+    transition-duration: 0.3s;
+  }
+  .fleet-list > li:hover > button {
+    box-shadow: inset 0px 0px 10px 1px rgb(100, 116, 119);
+    transition-duration: 0.3s;
+  }
+  .fleet-list > li > p {
+    font: 400 30px/1.8 "Lato", sans-serif;
+    margin: 0;
+    padding-bottom: 0px;
+  }
+  button[name="fleet-button"] {
+    background-image: url("img/no-images.png");
+    background-color: rgba(0,0,0,0.9);
+    border: none;
+    color: #777;
+    text-decoration: none;
+    margin: 3px 0 0 0;
+    padding: 8px;
+    width: 400px;
+    height: 348px;
+    border-radius: 10px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    background-size: contain;
+    background-repeat: space;
+    background-position: center;
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px;
+  }
+  button:hover[name="fleet-button"] {
+    cursor: pointer;
+    transition-duration: 0.3s;
+  }
+  .fleet-modal-backdrop {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  .fleet-modal-backdrop:hover {
+    text-shadow: none;
+  }
+  .fleet-modal-content {
+    background-color: #f0f0f0;
+    position: absolute;
+    margin: 0;
+    padding: 2.5%;
+    border: 1px solid #353636;
+    width: 86%;
+    height: 90%;
+    left: 4%;
+    top: 2%;
+    overflow-y: scroll;
+    
+    box-sizing: content-box;
+    border-radius: 8px;
+    border-width: 3px;
+    box-shadow: 0px 0px 40px 1px rgb(100, 116, 119);
+  }
+  .fleet-modal-close {
+    z-index: 1;
+    position: fixed;
+    right: 5%;
+    top: 2.5%;
+    color: #353636;
+    font-size: 50px;
+    font-weight: bold;
+    border-radius: 0px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgba(0,0,0,0.8);
+    background-color: white;
+    box-shadow: none;
+    transition-duration: 0.3s;
+  }
+  .fleet-modal-close:hover,
+  .fleet-modal-close:focus {
+    color: white;
+    background-color: rgba(0,0,0,0.9);
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119);
+    box-shadow: inset 0px 0px 10px 1px rgb(100, 116, 119);
+    transition-duration: 0.3s;
+  }
+  /*  slider code from: 
+      https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/
+  */
+  .slider {
+    margin: auto;
+    width: 95%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  .slides {
+    height: 85%;
+    display: flex;
+    overflow-x: auto;
+    border-radius: 5px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+  }
+  .slides::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+  }
+  .slides::-webkit-scrollbar-thumb {
+    background: #353636;
+    border-radius: 10px;
+  }
+  .slides::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .slides > div {
+    flex-shrink: 0;
+    width: 100%;
+    border-radius: 10px;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider > a {
+    display: inline-flex;
+    width: 3rem;
+    height: 3rem;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 16px 0.8rem 0.2rem 0;
+    position: relative;
+    color: #353636;
+    background-color: white;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #353636;
+    box-shadow: none;
+  }
+  .slider > a:hover {
+    color: white;
+    background-color: rgba(0,0,0,0.9);
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119);
+    box-shadow: inset 0px 0px 10px 1px rgb(100, 116, 119);
+  }
+  .slider > a:active {
+    top: 1px;
+  }
+  .slider > a:focus {
+    background: #000;
+    color: #f0f0f0;
+  }
+  .slide > a > img {
+    margin: 0;
+    padding: 0;
+    max-height: calc(100vh - 28vh);
+    /*overflow: hidden;*/
+    text-align: center;
+    background-color: #777;
+    border-radius: 2px;
+  }
+  .fleet-modal-images {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #777;
+  }
+  /* #endregion fleet 1130px mobile */
+  /* #region contact 1130px mobile */
+  .contact-parallax {
+    min-height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  8px 10px 0px black,
+                inset 0px -8px 10px 0px black;
+  }
+  .contact-title {
+    font: 400 50px "Lato", sans-serif;
+    padding: 15px;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #f0f0f0;
+    width: 88%;
+    text-shadow: 1px 1px 1px 1px #353636;
+    border-radius: 6px;
+    transition-duration: 0.3s;
+  }
+  .contact-title:hover {
+    cursor: none;
+    transition-duration: 0.3s;
+  }
+  .parallax-opacity:hover > .contact-title {
+    text-shadow: 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.7),
+                0px 0px 10px 1px rgb(100, 116, 119);
+    background-color: rgba(0,0,0,0.9);
+    cursor: none;
+    color: white;
+    transition-duration: 0.3s;
+  }
+  .contact {
+    background-color: #f0f0f0;
+    color: #353636;
+  }
+  .contact-information-area > p {
+    margin: auto;
+    font: 400 30px/1.8 "Lato", sans-serif;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .contact-message-form {
+    text-align: center;
+  }
+  .contact-message-form > label > input:not(:last-child) {
+    width: 560px;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #353636;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 2px;
+    text-align: center;
+    font: 400 30px/1.8 "Lato", sans-serif;
+    text-shadow: none;
+    box-shadow: inset 2px 2px 5px 1px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  .message {
+    width: 560px;
+    height: 200px;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #353636;
+    padding: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 2px;
+    text-align: center;
+    font: 400 30px/1.8 "Lato", sans-serif;
+    text-overflow: ellipsis;
+    text-shadow: none;
+    box-shadow: inset 2px 2px 5px 1px rgba(0,0,0,0.5);
+  }
+  .contact-submit-button {
+    background-color: #f0f0f0;
+    border-style: solid;
+    border-color: #353636;
+    border-width: 3px;
+    /*border-radius: 6px;*/
+    border-radius: 10% / 50%;
+    font-size: 30px;
+    padding: 8px 20px 8px 20px;
+    box-shadow: inset -8px -14px 10px -10px rgba(0,0,0,0.7),
+                inset  10px  12px 10px -10px white,
+                       2px   3px  5px rgba(0,0,0,0.7);
+    transition-duration: 0.3s;
+  }
+  .contact-submit-button:hover {
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    background-color: rgba(0,0,0,0.9);
+    color: #f0f0f0;
+    text-shadow: 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119);
+    box-shadow: none;
+    box-shadow: inset 0px 0px 10px 1px rgb(100, 116, 119);
+  }
+  .contact-submit-button:active {
+    background-color: rgb(65, 65, 65);
+    color: #f0f0f0;
+  }
+  .contact-backdrop {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+    overflow: hidden;
+  }
+  .contact-box {
+    position: fixed;
+    width: 60%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f0f0f0;
+    border-color: #353636;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+  }
+  .contact-box > h3 {
+    font-size: 30px;
+    border-bottom-style: double;
+    padding-bottom: 10px;
+  }
+  .contact-box > p {
+    font-size: 24px;
+  }
+  .contact-box > button {
+    -webkit-box-shadow: inset  4px  10px 10px -10px white,
+                        inset -4px -10px 20px -10px #353636,
+                               1px   2px  5px   0px #353636;
+    -moz-box-shadow: inset  4px  10px 10px -10px white,
+                     inset -4px -10px 20px -10px #353636,
+                            1px   2px  5px   0px #353636;
+    box-shadow: inset  4px  10px 10px -10px white,
+                inset -4px -10px 20px -10px #353636,
+                       1px   2px  5px   0px #353636;
+    background-color: rgb(230, 230, 230);
+    border-style: solid;
+    border-color: #353636;
+    border-width: 2px;
+    /*border-radius: 6px;*/
+    border-radius: 4% / 40%;
+    font-size: 24px;
+    padding: 4px 12px 4px 12px;
+  }
+  .sent-box {
+    position: fixed;
+    width: 26%;
+    height: 8%;
+    top: 92%;
+    left: 74%;
+    background-color: #777;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .sent-box > p {
+    font-size: 2.3vh;
+    margin: 0;
+    padding-left: 4px;
+    padding-top: 4px;
+  }
+  .contact-info {
+    font-size: 24px;
+    width: 560px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    border-style: solid;
+    border-width: 3px;
+    background-color: white;
+    box-shadow: 2px 3px 10px 1px black;
+  }
+  .contact-info > h3 {
+    font: 400 40px/1.4 "Lato", sans-serif;
+    font-weight: 600;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    padding-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .contact-info > p {
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    font: 400 30px/1.3 "Lato", sans-serif;
+  }
+  /* #endregion contact 768px mobile */
+}
+@media all and (min-width: 1148px) {
+  .navigation > h1 {
+    padding-left: 20px;
+  }
+  .navigation img {
+    transform: translate(0);
+  }
+  .navigation > h1 {
+    padding-left: 170px;
+  }
+  .navigation-normal {
+    right: 4px;
+  }
+  /* Making width of parallax messages pixel valued (instead of %) */
+  .parallax-pretty {
+    width: 1000px;
+  }
+  .services-pretty {
+    width: 500px;
+  }
+  .safety-pretty {
+    width: 500px;
+  }
+  .fleet-pretty {
+    width: 500px;
+  }
+  .contact-title {
+    width: 500px;
+  }
+}
+@media all and (min-width: 1300px) {
+  .navigation-normal {
+    right: 0px;
+    top: 24px;
+    width: 525px;
+    font-size: 26px;
+  }
+  .navigation-normal a {
+    padding: 10px 6px 10px 6px;
+    margin: 0 4px 0 4px;
+  }
+  .contact-information-area {
+    position: relative;
+  }
+  .contact-message-form {
+    width: 560px;
+    transform: translate(15%);
+  }
+  .contact-info {
+    transform: none;
+    height: 475px;
+    bottom: 117px;
+    left: 52%;
+    margin: 0;
+    position: absolute;
+    border-radius: 8px;
+  }
+}
+@media all and (min-width: 1630px) {
+  .about-parallax-pretty {
+    width: 65%;
+    margin-top: 255px;
+  }
+  .navigation > h1 {
+    padding-left: 0;
+    text-align: center;
+  }
+  .navigation img {
+    left: 22%;
+  }
+  .about-statement {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  .services-statement {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  .safety-statement {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  .contact-information-area > p {
+    width: auto;
+    transform: translate(0);
+    left: 0;
+    padding-left: 90px;
+    padding-right: 90px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+@media all and (min-width: 1800px) {
+  .about-parallax-pretty {
+    width: 55%;
+  }
+  .about-statement {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+  .services-statement {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+  .safety-statement {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+  .fleet {
+    background-color: #f0f0f0;
+  }
+  .horizonatal-list-container {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-information-area > p {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+  .contact-message-form {
+    transform: translate(40%);
+  }
+  
+  /* #region experiment 1 
+  .about-statement {
+    color: #f0f0f0;
+    background-color: rgba(0,0,0,0.8);
+    width: 80%;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.8);
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .about-parallax {
+    box-shadow: none;
+  }
+  .services-parallax {
+    box-shadow: none;
+  }
+  .parallax-opacity {
+    background-color: none;
+    background-color: rgba(0,0,0,0);
+  }
+  .parallax-opacity:hover {
+    box-shadow: none;
+  }
+  /* #endregion */
+  /* #region experiment 2 */
+  /* #endregion */
+}
+
+
+/* Services */
+
+
+/* #endregion Media css (phone friendly stuff) */
+
+/* Small things */
+
+/* Scrollbar taken from: https://gist.github.com/devinrhode2/2573411 */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(0,0,0,0);
+  border-radius: 100px;
+}
+::-webkit-scrollbar:hover {
+  background-color: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-thumb:vertical {
+  background: rgba(0,0,0,0.5);
+  border-radius: 100px;
+}
+section.page:not(.focus):not(:hover)::-webkit-scrollbar {
+  display: none;
+}
+::-webkit-scrollbar-track,::-webkit-scrollbar-thumb {
+  border: 5px solid transparent;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2) inset;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #777;
+  background-clip: content-box;
+  box-shadow: 0 0 0 5px hsla(24, 20%, 50%, 0.4) inset;
+  min-height: 20px;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
