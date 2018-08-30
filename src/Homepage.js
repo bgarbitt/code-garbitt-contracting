@@ -169,7 +169,7 @@ class Modal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      url: "ec2-35-182-125-158.ca-central-1.compute.amazonaws.com/services/retrieve",
+      url: "http://127.0.0.1:5000/services/retrieve",
       title: this.props.name,
       description: "Description Loading...",
       videoUrls: ["about:blank"],
@@ -480,7 +480,7 @@ class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      url: "ec2-35-182-125-158.ca-central-1.compute.amazonaws.com/contact",
+      url: "http://127.0.0.1:5000/contact",
       name: '',
       organization: '',
       email: '',
@@ -664,7 +664,7 @@ class Homepage extends Component {
   constructor (props) {
     super (props);
     this.state = {
-      url: "ec2-35-182-125-158.ca-central-1.compute.amazonaws.com/"
+      url: "http://127.0.0.1:5000/"
     };
     this.url_selector = this.url_selector.bind(this);
   }
@@ -675,15 +675,15 @@ class Homepage extends Component {
     // image size: small = 1, medium = 2, large = 3
     if (window.innerWidth < 768) {
       this.setState ({
-        url: "ec2-35-182-125-158.ca-central-1.compute.amazonaws.com/?size=1"
+        url: "http://127.0.0.1:5000/?size=1"
       })
     } else if (window.innerWidth < 1130) {
       this.setState ({
-        url: "ec2-35-182-125-158.ca-central-1.compute.amazonaws.com/?size=2"
+        url: "http://127.0.0.1:5000/?size=2"
       })
     } else {
       this.setState ({
-        url: "ec2-35-182-125-158.ca-central-1.compute.amazonaws.com/?size=3"
+        url: "http://127.0.0.1:5000/?size=3"
       })
     }
   }
