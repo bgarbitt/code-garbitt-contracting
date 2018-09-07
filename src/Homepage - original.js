@@ -89,28 +89,15 @@ class Services extends Component {
   constructor (props) {
     super (props);
     this.state = {
-      url: "https://1dtn1a9rh9.execute-api.us-east-1.amazonaws.com/2nd-attempt/services",
-      services: []
+      servicesList: [
+        "Mulching", "Oilfiled Labour Crews", "Tree Trimming", "Tree Removal",
+        "Tree Transplanting", "Chainlink Fencing", "Snow Plowing (Snowcat)",
+        "Skid Steers", "Labour Crews", "Pipeline Clearing", "Fenceline Clearing",
+        "General Excavating", "Commercial / Residential Land Clearing",
+        "Disaster / Debris Clean-up", "Overgrowth Clean-Up", "Mulch Site Projects",
+        "Powerline Clearing"
+      ]
     }
-  }
-  componentDidMount() {
-    //this.getServices(this.state.url);
-  }
-  getServices(url) {
-    return fetch(url, {
-      cache: 'no-cache',
-      headers: {
-        'content-type': 'application/json'
-      },
-      method: 'GET'
-    }).then(data => {
-      console.log(data);
-      this.setState({
-        // SHould be an array of the form:
-        // [{"service": "blah", description....}]
-        services: data
-      })
-    }).catch(error => console.log(error));
   }
   render () {
     return (
@@ -121,7 +108,7 @@ class Services extends Component {
           </div>
         </div>
         <p className="services-statement">At Garbitt Contracting, we offer services in: (click for more info)<br/></p>
-        <ServicesList services={this.state.services}/>
+        <ServicesList servicesList={this.state.servicesList}/>
         <br/>
       </section>
     );
@@ -132,8 +119,8 @@ class ServicesList extends Component {
     return (
       <div className="horizonatal-list-container">
         <ul className="services-list">
-          {this.props.services.map((serviceArray, index) => {
-            return <ModalButton service={serviceArray} key={index}/>
+          {this.props.servicesList.map((service, index) => {
+            return <ModalButton name={service} key={index}/>
           })}
         </ul>
       </div>
@@ -162,9 +149,9 @@ class ModalButton extends Component {
         <button 
           name="services-button"
           onClick={this.handleClick}>
-          {this.props.service["service"]}
+          {this.props.name}
         </button>
-        {this.state.showModal ? <Modal service={this.props.service} onSpanClick={this.handleClick}/> : null }
+        {this.state.showModal ? <Modal name={this.props.name} onSpanClick={this.handleClick}/> : null }
       </li>
     );
   }
@@ -181,12 +168,44 @@ Note: the iframe for the video needs a youtube url of the form:
 class Modal extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      url: "http://127.0.0.1:3000/services/retrieve",
+      title: this.props.name,
+      description: "Description Loading...",
+      videoUrls: ["about:blank"],
+      resources: "Resources Loading...",
+      imageUrls: [""]
+    }
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
   componentDidMount() {
     document.addEventListener('click', this.handleOutsideClick, false);
+    this.getServices(this.state.url, {service: this.state.title});
   }
+  getServices(url, service) {
+    // CHANGED THIS TO ALLOW JSON INSTEAD OF URL ENCODE
+    var data = new FormData();
+    data.append("json", JSON.stringify(service));
+    return fetch(url, {
+      body: data,
+      cache: 'no-cache',
+      headers: {
+        'content-type': 'application/json'
+      },
+      method: 'POST'
+    }).then(response => {
+      return response.json();
+    }).then(data => {
+      this.setState({
+        //data = {"explanation":["s"],"image":["i","i"],"video":["v","v"]}
+        description: data.explanation[0],
+        videoUrls: data.video,
+        imageUrls: data.image
+      })
+    }).catch(error => console.error(error));
+  }
+  
   handleOutsideClick(e) {
     if (this.node.contains(e.target)) {
       return;
@@ -198,6 +217,8 @@ class Modal extends Component {
     document.removeEventListener('click', this.handleOutsideClick, false);
     this.props.onSpanClick();
   }
+  // What to do about an empty video: insert "about_blank" as a video url in the
+  // database.
   render () {
     return (
       <div className="service-modal-backdrop" >
@@ -208,19 +229,20 @@ class Modal extends Component {
             onClick={this.handleClick}>
             &times;
           </button>
-          <h2>{this.props.service["service"]}</h2>
-          <p dangerouslySetInnerHTML={{__html: this.props.service["description"]}} />
+          <h2>{this.props.name}</h2>
+          <p dangerouslySetInnerHTML={{__html: this.state.description}} />
           <h3>Video Example (if available)</h3>
           <div className="video-container">
             <iframe 
               width="420" 
               height="236" 
-              src={this.props.service["video_url"]} 
-              title={this.props.service["service"] + " Video"} allowFullScreen>
+              src={this.state.videoUrls[0]} 
+              title={this.props.name + " Video"} allowFullScreen>
             </iframe>
           </div>
           <h3>Image Gallery (if available)</h3>
-          <ModalImages urls={this.props.service["img_urls"]} title={this.props.service["service"]}/>
+          <ModalImages urls={this.state.imageUrls} {...this.state}/>
+          
         </div>
       </div>
     );
@@ -236,13 +258,16 @@ the url's in the database.
 class ModalImages extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      imageTitle: this.props.title + " image"
+    };
   }
   render() {
     return(
       <div className="horizontal-list-container">
         <ul className="service-modal-images">
             {this.props.urls.map((url, index) => {
-              if (url === "none") {
+              if (url === "") {
                 return (
                   <li className="service-modal-images-crop" key={index}>
                     <img src={none} alt={"This image is unavailable"}/>
@@ -251,7 +276,7 @@ class ModalImages extends Component {
               } else {
                 return (
                   <li className="service-modal-images-crop" key={index}>
-                    <a href={url} target="_blank"><img src={url} alt={this.props.title + " Image " + index}/></a>
+                    <a href={url} target="_blank"><img src={url} alt={this.state.imageTitle + " " + index}/></a>
                   </li>
                 );
               }
@@ -302,20 +327,22 @@ class Fleet extends Component {
   constructor (props) {
     super (props);
     this.state = {
+      //url: "http://127.0.0.1:3000/",
       fleet: {}
     }
   }
   componentDidMount () {
-    //this.getFleet(this.props.url);
+    this.getFleet(this.props.url);
   }
   getFleet(url) {
     return fetch(url, {
       cache: 'no-cache',
       headers: {
-        'content-type': 'application/json'
+        'content-type': 'application/x-www-form-urlencoded'
       },
       method: 'GET'
     }).then(response => {
+      console.log(response);
       return response.json();
     }).then(data => {
       this.setState({
@@ -323,6 +350,9 @@ class Fleet extends Component {
         fleet: data
       })
     }).catch(error => console.error(error));
+  }
+  test() {
+    console.log(this.props.url);
   }
   render () {
     return (
@@ -364,7 +394,7 @@ class FleetModalImageButton extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   backgroundImg () {
-    if (this.props.urls[0] === 'none') {
+    if (this.props.urls[0] === '') {
       return {backgroundImage: 'url(${none})', backgroundSize: 'cover'};
     } else {
       return {backgroundImage: "url(" + this.props.urls[(Math.floor(Math.random() * this.props.urls.length))] + ")"}
@@ -453,7 +483,7 @@ class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      url: "https://1dtn1a9rh9.execute-api.us-east-1.amazonaws.com/2nd-attempt/contact",
+      url: "http://127.0.0.1:3000/contact",
       name: '',
       organization: '',
       email: '',
@@ -495,18 +525,18 @@ class Contact extends Component {
     }, 5000);
   }
   sendEmail() {
-    var data = {
-      "name": this.state.name,
-      "organization": this.state.organization,
-      "email": this.state.email,
-      "phone": this.state.phone,
-      "message": this.state.message
-    }
+    var data = 
+      "name="+encodeURIComponent(this.state.name)+"&"+
+      "organization="+encodeURIComponent(this.state.organization)+"&"+
+      "email="+encodeURIComponent(this.state.email)+"&"+
+      "phone="+encodeURIComponent(this.state.phone)+"&"+
+      "message="+encodeURIComponent(this.state.message);
+    console.log(this.state.name);
     return fetch(this.state.url, {
-      body: JSON.stringify(data),
+      body: data,
       cache: 'no-cache',
       headers: {
-        'content-type': 'application/json'
+        'content-type': 'application/x-www-form-urlencoded'
       },
       method: 'POST'
     }).then(response => {
@@ -637,7 +667,7 @@ class Homepage extends Component {
   constructor (props) {
     super (props);
     this.state = {
-      url: "https://1dtn1a9rh9.execute-api.us-east-1.amazonaws.com/2nd-attempt/"
+      url: "http://127.0.0.1:3000/"
     };
     this.url_selector = this.url_selector.bind(this);
   }
@@ -648,15 +678,15 @@ class Homepage extends Component {
     // image size: small = 1, medium = 2, large = 3
     if (window.innerWidth < 768) {
       this.setState ({
-        url: "https://1dtn1a9rh9.execute-api.us-east-1.amazonaws.com/2nd-attempt/?size=1"
+        url: "http://127.0.0.1:3000/?size=1"
       })
     } else if (window.innerWidth < 1130) {
       this.setState ({
-        url: "https://1dtn1a9rh9.execute-api.us-east-1.amazonaws.com/2nd-attempt/?size=2"
+        url: "http://127.0.0.1:3000/?size=2"
       })
     } else {
       this.setState ({
-        url: "https://1dtn1a9rh9.execute-api.us-east-1.amazonaws.com/2nd-attempt/?size=3"
+        url: "http://127.0.0.1:3000/?size=3"
       })
     }
   }
