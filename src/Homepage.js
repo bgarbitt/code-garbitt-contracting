@@ -94,7 +94,7 @@ class Services extends Component {
     }
   }
   componentDidMount() {
-    //this.getServices(this.state.url);
+    this.getServices(this.state.url);
   }
   getServices(url) {
     return fetch(url, {
@@ -103,8 +103,9 @@ class Services extends Component {
         'content-type': 'application/json'
       },
       method: 'GET'
+    }).then(response => {
+      return response.json();
     }).then(data => {
-      console.log(data);
       this.setState({
         // SHould be an array of the form:
         // [{"service": "blah", description....}]
@@ -306,7 +307,7 @@ class Fleet extends Component {
     }
   }
   componentDidMount () {
-    //this.getFleet(this.props.url);
+    this.getFleet(this.props.url);
   }
   getFleet(url) {
     return fetch(url, {
@@ -416,7 +417,6 @@ class FleetModal extends Component {
     this.props.onSpanClick();
   }
   clicked(e) {
-    console.log("Click!");
     return
   }
   render () {
@@ -576,7 +576,7 @@ class Contact extends Component {
               Fax: <i>(780) 524-4753</i><br/>
               Location: SW-21-70-23-W5<br/>
               <span className="background-color-text">Location: </span>Valleyview, AB<br/>
-              <span className="background-color-text">Location: </span>T0H 3N0<br/>
+              <span className="background-color-text">Location: </span>T0H 3N0, Box 131<br/>
             </p>
           </div>
           <br/>
@@ -648,15 +648,15 @@ class Homepage extends Component {
     // image size: small = 1, medium = 2, large = 3
     if (window.innerWidth < 768) {
       this.setState ({
-        url: "https://1dtn1a9rh9.execute-api.us-east-1.amazonaws.com/2nd-attempt/?size=1"
+        url: "https://1dtn1a9rh9.execute-api.us-east-1.amazonaws.com/2nd-attempt/fleet/?size=small"
       })
     } else if (window.innerWidth < 1130) {
       this.setState ({
-        url: "https://1dtn1a9rh9.execute-api.us-east-1.amazonaws.com/2nd-attempt/?size=2"
+        url: "https://1dtn1a9rh9.execute-api.us-east-1.amazonaws.com/2nd-attempt/fleet/?size=medium"
       })
     } else {
       this.setState ({
-        url: "https://1dtn1a9rh9.execute-api.us-east-1.amazonaws.com/2nd-attempt/?size=3"
+        url: "https://1dtn1a9rh9.execute-api.us-east-1.amazonaws.com/2nd-attempt/fleet/?size=large"
       })
     }
   }
