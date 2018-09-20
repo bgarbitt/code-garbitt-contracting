@@ -24,8 +24,8 @@ functions. Code structure is as follows:
  *                                  Normal CSS
  * ----------------------------------------------------------------------------
 */
-@media all and (max-width: 601px) {
-  /* #region navigation 600px mobile */
+@media all and (max-width: 375px) {
+  /* #region navigation 375px mobile */
   .navigation {
     position: fixed;
     top: 0;
@@ -42,10 +42,10 @@ functions. Code structure is as follows:
     box-shadow: 0px   2px  10px   0px black;
   }
   .navigation h1 {
-    font-size: 2.5em;
-    width: 100%;
-    margin: 0px 0px 0px 10px;
-    padding-top: 6px;
+    font-size: 1.6em;
+    width: 56%;
+    margin: -2px 0px 0px 10px;
+    padding-left: 10px;
     text-align: left;
   }
   .navigation img {
@@ -67,10 +67,11 @@ functions. Code structure is as follows:
     background-color: white;
     border-style: solid;
     border-color: rgb(0,0,0);
-    font-size: 26px;
-    border-radius: 15% / 40%;
+    font-size: 20px;
+    border-radius: 20% / 40%;
     border-width: 2px;
-    padding: 8px 18px 8px 18px;
+    margin-top: -1px;
+    padding: 12px 18px 12px 18px;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     -webkit-box-shadow: inset 0px  5px 10px -10px black,
@@ -86,9 +87,9 @@ functions. Code structure is as follows:
   .navigation-dropdown-content {
     position: absolute;
     letter-spacing: 1px;
-    font-size: 26px;
+    font-size: 20px;
     right: 0px;
-    width: 150px;
+    width: 120px;
     border-style: solid;
     border-width: 2px;
     background-color: #f0f0f0;
@@ -110,8 +111,8 @@ functions. Code structure is as follows:
     margin-bottom: 1px;
     margin-top: 1px;
     padding-right: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
   .navigation-dropdown-content a:hover {
     background-color: rgba(0,0,0,0.8);
@@ -143,7 +144,7 @@ functions. Code structure is as follows:
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: 30%;
+    background-position-x: 5%;
     background-position-y: -40%;
     box-shadow: inset 0px  4px 10px 0px black,
                 inset 0px -4px 10px 0px black;
@@ -156,7 +157,7 @@ functions. Code structure is as follows:
     transition-duration: 0.3s;
   }
   .about-parallax-pretty {
-    font: 400 32px "Lato", sans-serif;
+    font: 400 26px "Lato", sans-serif;
     padding: 10px;
     margin: auto;
     margin-top: 145px;
@@ -164,7 +165,7 @@ functions. Code structure is as follows:
     letter-spacing: 8px;
     background-color: rgba(0,0,0,0.7);
     color: #f0f0f0;
-    width: 70%;
+    width: 90%;
     text-shadow: 1px 1px 1px 1px black;
     border-radius: 6px;
     transition-duration: 0.3s;
@@ -183,7 +184,7 @@ functions. Code structure is as follows:
   .about-statement {
     text-align: justify;
     margin: auto;
-    font: 400 24px/1.8 "Lato", sans-serif;
+    font: 400 18px/1.8 "Lato", sans-serif;
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 20px;
@@ -203,15 +204,16 @@ functions. Code structure is as follows:
     min-height: 200px;
 
     /* Meat and bones of parallax */
-    background-attachment: fixed;
+    background-color: black;
+    background-attachment: absolute;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 110%;
     box-shadow: inset 0px  6px 10px 0px black,
                 inset 0px -6px 10px 0px black;
   }
   .services-pretty {
-    font: 400 32px "Lato", sans-serif;
+    font: 400 26px "Lato", sans-serif;
     padding: 10px;
     margin: auto;
     margin-top: 71px;
@@ -243,7 +245,7 @@ functions. Code structure is as follows:
   }
   .services-statement {
     margin: auto;
-    font: 400 24px/1.8 "Lato", sans-serif;
+    font: 400 18px/1.8 "Lato", sans-serif;
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 20px;
@@ -273,14 +275,14 @@ functions. Code structure is as follows:
     color: rgb(65, 65, 65);
   }
   button[name="services-button"] {
-    font: 400 24px/1.8 "Lato", sans-serif;
+    font: 400 18px/1.8 "Lato", sans-serif;
     background-color: white;
     border: none;
     color: #353636;
     text-decoration: none;
     margin-top: 1px;
     margin-bottom: 4px;
-    padding: 8px;
+    padding: 12px 8px 12px 8px;
     margin-left: 2px;
     margin-right: 2px;
     border-style: solid;
@@ -294,6 +296,7 @@ functions. Code structure is as follows:
     border-color: rgba(0,0,0,0.8);
     color: white;
     text-shadow: 0px 0px 1px white;
+    cursor: pointer;
   }
   .service-modal-backdrop {
     position: fixed;
@@ -321,15 +324,14 @@ functions. Code structure is as follows:
   }
   .service-modal-close {
     position: absolute;
-    right: 6.5%;
-    top: 2.8%;
+    right: 6%;
+    top: 2%;
     z-index: 1;
+    padding: 0 20px 10px 20px;
     color: #353636;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
-    border-radius: 0;
-    border-bottom-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: 50%;
     border-style: solid;
     border-width: 2px;
     border-color: rgba(0,0,0,0.8);
@@ -344,13 +346,23 @@ functions. Code structure is as follows:
     text-shadow: 0px 0px 1px white;
     box-shadow: 0px 0px 10px 0px black;
   }
-  .service-modal-content > h2 {
+  .service-modal-header {
+    width: 100%;
+    position: static;
+    background-color: #f0f0f0;
+    border-style: solid;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  .service-modal-header > h2 {
     margin: 0;
-    font-size: 32px;
+    font-size: 26px;
+    text-align: left;
+    padding: 10px;
   }
   .service-modal-content > p {
     margin: auto;
-    font: 400 24px/1.8 "Lato", sans-serif;
+    font: 400 18px/1.8 "Lato", sans-serif;
     text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
@@ -358,9 +370,9 @@ functions. Code structure is as follows:
     padding-bottom: 20px;
     color: #353636;
   }
-  .service-modal-content > h3 {
+  .service-modal-header > h3 {
     margin: 0;
-    font-size: 28px;
+    font-size: 22px;
     margin-bottom: 20px;
     padding-top: 10px;
     border-top-style: solid;
@@ -392,14 +404,14 @@ functions. Code structure is as follows:
   li.service-modal-images-crop {
     background-color: black;
     min-width: 0;
-    width: 500px;
-    height: 375px;
+    width: 300px;
+    height: 225px;
     margin-bottom: 4px;
     list-style-type: none;
   }
   .service-modal-images-crop img {
-    height: 375px;
-    width: 500px;
+    height: 225px;
+    width: 300px;
     object-fit: contain;
   }
   /* #endregion services 600px mobile */
@@ -415,10 +427,11 @@ functions. Code structure is as follows:
     min-height: 200px;
 
     /* Meat and bones of parallax */
-    background-attachment: fixed;
+    background-color: black;
+    background-attachment: absolute;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 90%;
     box-shadow: inset 0px  6px 10px 0px black,
                 inset 0px -6px 10px 0px black;
   }
@@ -430,7 +443,7 @@ functions. Code structure is as follows:
     transition-duration: 0.3s;
   }
   .safety-pretty {
-    font: 400 32px "Lato", sans-serif;
+    font: 400 26px "Lato", sans-serif;
     padding: 10px;
     margin: auto;
     margin-top: 71px;
@@ -455,7 +468,7 @@ functions. Code structure is as follows:
   }
   .safety-statement {
     margin: auto;
-    font: 400 24px/1.8 "Lato", sans-serif;
+    font: 400 18px/1.8 "Lato", sans-serif;
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 20px;
@@ -475,15 +488,16 @@ functions. Code structure is as follows:
     min-height: 200px;
 
     /* Meat and bones of parallax */
-    background-attachment: fixed;
+    background-color: black;
+    background-attachment: absolute;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 90%;
     box-shadow: inset 0px  6px 10px 0px black,
                 inset 0px -6px 10px 0px black;
   }
   .fleet-pretty {
-    font: 400 32px "Lato", sans-serif;
+    font: 400 26px "Lato", sans-serif;
     padding: 10px;
     margin: auto;
     margin-top: 71px;
@@ -586,17 +600,17 @@ functions. Code structure is as follows:
   }
   .fleet-modal-close {
     position: absolute;
-    right: 6%;
+    right: 6.5%;
     top: 2.8%;
+    z-index: 1;
+    padding: 0 20px 10px 20px;
     color: #353636;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
-    border-radius: 0;
-    border-bottom-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: 50%;
     border-style: solid;
     border-width: 2px;
-    border-color: rgba(0,0,0,0.9);
+    border-color: rgba(0,0,0,0.8);
     background-color: white;
   }
   .fleet-modal-close:hover,
@@ -620,7 +634,7 @@ functions. Code structure is as follows:
     overflow-x: hidden;
   }
   .slides {
-    height: 90%;
+    height: 85%;
     display: flex;
     overflow-x: auto;
     border-radius: 5px;
@@ -675,9 +689,6 @@ functions. Code structure is as follows:
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
   }
-  .slider > a:active {
-    top: 1px;
-  }
   .slider > a:focus {
     background: #000;
     color: white;
@@ -685,6 +696,7 @@ functions. Code structure is as follows:
   .slide > a > img {
     margin: 0;
     padding: 0;
+    width: 270px;
     max-height: calc(100vh - 24vh);
     /*overflow: hidden;*/
     text-align: center;
@@ -713,7 +725,7 @@ functions. Code structure is as follows:
                 inset 0px -6px 10px 0px black;
   }
   .contact-title {
-    font: 400 32px "Lato", sans-serif;
+    font: 400 26px "Lato", sans-serif;
     padding: 10px;
     margin: auto;
     margin-top: 71px;
@@ -746,7 +758,7 @@ functions. Code structure is as follows:
     border-width: 2px;
   }
   .contact-information-area > p {
-    font-size: 24px;
+    font: 400 18px/1.8 "Lato", sans-serif;
     position: relative;
     width: 90%;
     left: 50%;
@@ -765,7 +777,7 @@ functions. Code structure is as follows:
     padding-bottom: 2px;
     margin: 2px;
     text-align: center;
-    font: 400 24px/1.8 "Lato", sans-serif;
+    font: 400 18px/1.8 "Lato", sans-serif;
   }
   .message {
     width: 80%;
@@ -778,7 +790,7 @@ functions. Code structure is as follows:
     padding-bottom: 2px;
     margin: 2px;
     text-align: center;
-    font: 400 24px/1.8 "Lato", sans-serif;
+    font: 400 18px/1.8 "Lato", sans-serif;
     text-overflow: ellipsis;
   }
   .contact-submit-button {
@@ -788,16 +800,14 @@ functions. Code structure is as follows:
     -moz-box-shadow: inset  4px  10px 10px -10px white,
                      inset -4px -10px 20px -10px black,
                             1px   2px  5px   0px black;
-    box-shadow: inset  4px  10px 10px -10px white,
-                inset -4px -10px 20px -10px black,
-                       1px   2px  5px   0px black;
+    box-shadow: 0px 0px 10px 0px black;
     background-color: white;
     border-style: solid;
     border-color: black;
     border-width: 2px;
     border-radius: 4% / 40%;
-    font-size: 24px;
-    padding: 8px 12px 8px 12px;
+    font-size: 18px;
+    padding: 14px 12px 14px 12px;
   }
   .contact-submit-button:hover {
     transition-duration: 0.2s;
@@ -880,8 +890,8 @@ functions. Code structure is as follows:
   }
   .contact-info {
     background-color: white;
-    font-size: 24px;
-    width: 530px;
+    font-size: 18px;
+    width: 325px;
     position: relative;
     left: 50%;
     transform: translate(-50%);
@@ -889,7 +899,7 @@ functions. Code structure is as follows:
     border-width: 2px;
   }
   .contact-info > h3 {
-    font-size: 30px;
+    font-size: 26px;
     border-bottom-style: solid;
     padding-left: 10px;
     margin-top: 10px;
@@ -902,8 +912,897 @@ functions. Code structure is as follows:
     color: white;
     user-select: none;
   }
-  /* #endregion contact 600px mobile */
-  
+  /* #endregion contact 600px mobile */ 
+}
+@media all and (min-width: 375px) {
+  /* #region navigation 375px mobile */
+  .navigation {
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    padding-top: 4px;
+    background-color: #f0f0f0;
+    z-index: 1;
+    border-bottom-style: solid;
+    border-width: 2px;
+    border-bottom-color: rgb(0,0,0);
+    -webkit-box-shadow: 0px   2px  10px   0px black;
+    -moz-box-shadow: 0px   2px  10px   0px black;
+    box-shadow: 0px   2px  10px   0px black;
+  }
+  .navigation h1 {
+    font-size: 1.6em;
+    width: 56%;
+    margin: -2px 0px 0px 10px;
+    padding-left: 10px;
+    text-align: left;
+  }
+  .navigation img {
+    display: none;
+  }
+  .navigation-normal {
+    display: none;
+  }
+  .navigation-dropdown {
+    position: absolute;
+    display: inline-block;
+    text-align: right;
+    right: 20px;
+    top: 8px;
+  }
+  .navigation-dropdown-button {
+    color: #353636;
+    letter-spacing: 1px;
+    background-color: white;
+    border-style: solid;
+    border-color: rgb(0,0,0);
+    font-size: 20px;
+    border-radius: 20% / 40%;
+    border-width: 2px;
+    margin-top: -1px;
+    padding: 12px 18px 12px 18px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-box-shadow: inset 0px  5px 10px -10px black,
+                        inset 0px -5px 10px -10px black,
+                              0px  0px  5px   1px black;
+    -moz-box-shadow: inset 0px  5px 10px -10px black,
+                     inset 0px -5px 10px -10px black,
+                           0px  0px  5px   1px black;
+    box-shadow: inset 0px  5px 10px -10px black,
+                inset 0px -5px 10px -10px black,
+                      0px  0px  5px   1px black;
+  }
+  .navigation-dropdown-content {
+    position: absolute;
+    letter-spacing: 1px;
+    font-size: 20px;
+    right: 0px;
+    width: 120px;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #f0f0f0;
+    border-radius: 6px;
+    padding-right: 1px;
+    padding-left: 1px;
+    box-shadow: 0px 1px 10px 1px black;
+    text-shadow: none;
+  }
+  .navigation-dropdown-content a {
+    color: #353636;
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(0,0,0,0.9);
+    text-decoration: none;
+    display: block;
+    border-radius: 6px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    padding-right: 5px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .navigation-dropdown-content a:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    text-shadow: 0px 0px 1px white;
+  }
+  .navigation-dropdown:hover .navigation-dropdown-button {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    text-shadow: 0px 0px 1px white;
+  }
+  /* #endregion navigation 600px mobile */
+  /* #region about 600px mobile */
+  .about {
+    /* In order to not be covered by the navigation bar */
+    padding-top: 66px;
+    background-color: #f0f0f0;
+  }
+  .about-parallax {
+    /* Image to be used */
+    background-image: url("img/office.jpg");
+    overflow: auto;
+
+    /* Set specific height */
+    min-height: 400px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 5%;
+    background-position-y: -40%;
+    box-shadow: inset 0px  4px 10px 0px black,
+                inset 0px -4px 10px 0px black;
+  }
+  .about-parallax-opacity {
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(242,133,0,0.1);
+    transition-duration: 0.3s;
+  }
+  .about-parallax-pretty {
+    font: 400 26px "Lato", sans-serif;
+    padding: 10px;
+    margin: auto;
+    margin-top: 145px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #f0f0f0;
+    width: 90%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+    transition-duration: 0.3s;
+  }
+  .about-parallax-opacity:hover > .about-parallax-pretty {
+    text-shadow: 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.7),
+                0px 0px 10px 1px rgb(100, 116, 119);
+    background-color: rgba(0,0,0,0.9);
+    cursor: none;
+    color: white;
+    transition-duration: 0.3s;
+  }
+  .about-statement {
+    text-align: justify;
+    margin: auto;
+    font: 400 18px/1.8 "Lato", sans-serif;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #353636;
+  }
+  /* #endregion about 600px mobile */
+  /* #region services 600px mobile */
+  .services {
+    background-color: #f0f0f0;
+  }
+  .services-parallax {
+    /* Image to be used */
+    background-image: url("img/services.jpg");
+
+    /* Set specific height */
+    min-height: 200px;
+
+    /* Meat and bones of parallax */
+    background-color: black;
+    background-attachment: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 110%;
+    box-shadow: inset 0px  6px 10px 0px black,
+                inset 0px -6px 10px 0px black;
+  }
+  .services-pretty {
+    font: 400 26px "Lato", sans-serif;
+    padding: 10px;
+    margin: auto;
+    margin-top: 71px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #f0f0f0;
+    width: 55%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .services-parallax-opacity {
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(242,133,0,0.1);
+    transition-duration: 0.3s;
+  }
+  .services-parallax-opacity:hover > .services-pretty {
+    text-shadow: 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.7),
+                0px 0px 10px 1px rgb(100, 116, 119);
+    background-color: rgba(0,0,0,0.9);
+    cursor: none;
+    color: white;
+    transition-duration: 0.3s;
+  }
+  .services-statement {
+    margin: auto;
+    font: 400 18px/1.8 "Lato", sans-serif;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #353636;
+  }
+  .horizonatal-list-container {
+    width: 100%;
+    text-align: center;
+  }
+  ul.services-list {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+  }
+  ul.services-list > li {
+    list-style-type: none;
+    display: inline-block;
+    min-width: 10px;
+  }
+  ul.services-list > li > a {
+    display: inline-block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    color: rgb(65, 65, 65);
+  }
+  button[name="services-button"] {
+    font: 400 18px/1.8 "Lato", sans-serif;
+    background-color: white;
+    border: none;
+    color: #353636;
+    text-decoration: none;
+    margin-top: 1px;
+    margin-bottom: 4px;
+    padding: 12px 8px 12px 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  button:hover[name="services-button"] {
+    background-color: rgba(0,0,0,0.8);
+    border-color: rgba(0,0,0,0.8);
+    color: white;
+    text-shadow: 0px 0px 1px white;
+    cursor: pointer;
+  }
+  .service-modal-backdrop {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  .service-modal-content {
+    background-color: #f0f0f0;
+    margin: 2% auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 86%;
+    height: 90%;
+    overflow-y: scroll;
+    padding-right: 17px;
+    box-sizing: content-box;
+    border-radius: 6px;
+  }
+  .service-modal-close {
+    position: absolute;
+    right: 6%;
+    top: 2%;
+    z-index: 1;
+    padding: 0 20px 10px 20px;
+    color: #353636;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(0,0,0,0.8);
+    background-color: white;
+  }
+  .service-modal-close:hover,
+  .service-modal-close:focus {
+    color: white;
+    background-color: rgba(0,0,0,0.9);
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: 0px 0px 1px white;
+    box-shadow: 0px 0px 10px 0px black;
+  }
+  .service-modal-header {
+    width: 100%;
+    position: static;
+    background-color: #f0f0f0;
+    border-style: solid;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  .service-modal-header > h2 {
+    margin: 0;
+    font-size: 26px;
+    text-align: left;
+    padding: 10px;
+  }
+  .service-modal-content > p {
+    margin: auto;
+    font: 400 18px/1.8 "Lato", sans-serif;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #353636;
+  }
+  .service-modal-header > h3 {
+    margin: 0;
+    font-size: 22px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    border-top-style: solid;
+    border-width: 2px;
+    border-color: black;
+  }
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .service-modal-images {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #f0f0f0;
+    display: inline-block;
+  }
+  li.service-modal-images-crop {
+    background-color: black;
+    min-width: 0;
+    width: 300px;
+    height: 225px;
+    margin-bottom: 4px;
+    list-style-type: none;
+  }
+  .service-modal-images-crop img {
+    height: 225px;
+    width: 300px;
+    object-fit: contain;
+  }
+  /* #endregion services 600px mobile */
+  /* #region safety 600px mobile */
+  .safety {
+    background-color: #f0f0f0;
+  }
+  .safety-parallax {
+    /* Image to be used */
+    background-image: url("img/safety.jpg");
+
+    /* Set specific height */
+    min-height: 200px;
+
+    /* Meat and bones of parallax */
+    background-color: black;
+    background-attachment: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    box-shadow: inset 0px  6px 10px 0px black,
+                inset 0px -6px 10px 0px black;
+  }
+  .parallax-opacity {
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(242,133,0,0.1);
+    transition-duration: 0.3s;
+  }
+  .safety-pretty {
+    font: 400 26px "Lato", sans-serif;
+    padding: 10px;
+    margin: auto;
+    margin-top: 71px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #f0f0f0;
+    width: 55%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .parallax-opacity:hover > .safety-pretty {
+    text-shadow: 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.7),
+                0px 0px 10px 1px rgb(100, 116, 119);
+    background-color: rgba(0,0,0,0.9);
+    cursor: none;
+    color: white;
+    transition-duration: 0.3s;
+  }
+  .safety-statement {
+    margin: auto;
+    font: 400 18px/1.8 "Lato", sans-serif;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #353636;
+  }
+  /* #endregion safety 600px mobile */
+  /* #region fleet 600px mobile */
+  .fleet {
+    background-color: #f0f0f0;
+  }
+  .fleet-parallax {
+    /* Image to be used */
+    background-image: url("img/fleet.jpg");
+
+    /* Set specific height */
+    min-height: 200px;
+
+    /* Meat and bones of parallax */
+    background-color: black;
+    background-attachment: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    box-shadow: inset 0px  6px 10px 0px black,
+                inset 0px -6px 10px 0px black;
+  }
+  .fleet-pretty {
+    font: 400 26px "Lato", sans-serif;
+    padding: 10px;
+    margin: auto;
+    margin-top: 71px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #f0f0f0;
+    width: 55%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .fleet-pretty:hover {
+    cursor: none;
+    transition-duration: 0.3s;
+  }
+  .parallax-opacity:hover > .fleet-pretty {
+    text-shadow: 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.7),
+                0px 0px 10px 1px rgb(100, 116, 119);
+    background-color: rgba(0,0,0,0.9);
+    cursor: none;
+    color: white;
+    transition-duration: 0.3s;
+  }
+  ul.fleet-list {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+  }
+  .fleet-list > li {
+    list-style-type: none;
+    display: inline-block;
+    font: 400 24px/1.8 "Lato", sans-serif;
+    min-width: 0;
+    width: 204px;
+    height: 250px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .fleet-list > li:hover {
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    text-shadow: 0px 0px 1px white;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .fleet-list > li > p {
+    margin: 0;
+  }
+  button[name="fleet-button"] {
+    background-image: url("img/no-images.png");
+    background-color: rgba(0,0,0,0.9);
+    border: none;
+    color: #353636;
+    text-decoration: none;
+    font: 400 25px/1.8 "Lato", sans-serif;
+    margin: 3px 0 0 0;
+    padding: 8px;
+    width: 204px;
+    height: 204px;
+    border-radius: 10px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    background-size: contain;
+    background-repeat: space;
+    background-position: center;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.9);
+    border-width: 2px;
+  }
+  button:hover[name="fleet-button"] {
+    cursor: pointer;
+  }
+  .fleet-modal-backdrop {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  .fleet-modal-content {
+    background-color: #f0f0f0;
+    margin: 2% auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 86%;
+    height: 90%;
+    overflow-y: scroll;
+    padding-right: 17px;
+    box-sizing: content-box;
+    border-radius: 6px;
+  }
+  .fleet-modal-close {
+    position: absolute;
+    right: 6.5%;
+    top: 2.8%;
+    z-index: 1;
+    padding: 0 20px 10px 20px;
+    color: #353636;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(0,0,0,0.8);
+    background-color: white;
+  }
+  .fleet-modal-close:hover,
+  .fleet-modal-close:focus {
+    color: white;
+    background-color: rgba(0,0,0,0.9);
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119);
+    box-shadow: inset 0px 0px 10px 1px rgb(100, 116, 119);
+  }
+  /*  slider code from: 
+      https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/
+  */
+  .slider {
+    margin: auto;
+    width: 95%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  .slides {
+    height: 85%;
+    display: flex;
+    overflow-x: auto;
+    border-radius: 5px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+  }
+  .slides::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+  }
+  .slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+  }
+  .slides::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .slides > div {
+    flex-shrink: 0;
+    width: 100%;
+    border-radius: 10px;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider > a {
+    display: inline-flex;
+    width: 3rem;
+    height: 3rem;
+    background: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 16px 0.4rem 0.2rem 0;
+    position: relative;
+    color: #353636;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+  }
+  .slider > a:hover {
+    background-color: rgba(0,0,0,0.9);
+    text-shadow: 0px 0px 1px white;
+    color: white;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .slider > a:focus {
+    background: #000;
+    color: white;
+  }
+  .slide > a > img {
+    margin: 0;
+    padding: 0;
+    width: 270px;
+    max-height: calc(100vh - 24vh);
+    /*overflow: hidden;*/
+    text-align: center;
+    background-color: rgba(0,0,0,0.9);
+    border-radius: 2px;
+  }
+  /* #endregion fleet 600px mobile */
+  /* #region contact 600px mobile */
+  .contact {
+    background-color: #f0f0f0;
+  }
+  .contact-parallax {
+    /* Image to be used */
+    background-image: url("img/contact.jpg");
+    overflow: auto;
+
+    /* Set specific height */
+    min-height: 200px;
+
+    /* Meat and bones of parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px  6px 10px 0px black,
+                inset 0px -6px 10px 0px black;
+  }
+  .contact-title {
+    font: 400 26px "Lato", sans-serif;
+    padding: 10px;
+    margin: auto;
+    margin-top: 71px;
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: #f0f0f0;
+    width: 55%;
+    text-shadow: 1px 1px 1px 1px black;
+    border-radius: 6px;
+  }
+  .contact-title:hover {
+    cursor: none;
+    transition-duration: 0.3s;
+  }
+  .parallax-opacity:hover > .contact-title {
+    text-shadow: 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119),
+                 0px 0px 10px rgb(100, 116, 119);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.7),
+                0px 0px 10px 1px rgb(100, 116, 119);
+    background-color: rgba(0,0,0,0.9);
+    cursor: none;
+    color: white;
+    transition-duration: 0.3s;
+  }
+  .contact-information-area {
+    border: black;
+    border-bottom-style: solid;
+    border-width: 2px;
+  }
+  .contact-information-area > p {
+    font: 400 18px/1.8 "Lato", sans-serif;
+    position: relative;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .contact-message-form {
+    text-align: center;
+  }
+  .contact-message-form > label > input:not(:last-child) {
+    width: 50%;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 2px;
+    text-align: center;
+    font: 400 18px/1.8 "Lato", sans-serif;
+  }
+  .message {
+    width: 80%;
+    height: 200px;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 2px;
+    text-align: center;
+    font: 400 18px/1.8 "Lato", sans-serif;
+    text-overflow: ellipsis;
+  }
+  .contact-submit-button {
+    -webkit-box-shadow: inset  4px  10px 10px -10px white,
+                        inset -4px -10px 20px -10px black,
+                               1px   2px  5px   0px black;
+    -moz-box-shadow: inset  4px  10px 10px -10px white,
+                     inset -4px -10px 20px -10px black,
+                            1px   2px  5px   0px black;
+    box-shadow: 0px 0px 10px 0px black;
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 4% / 40%;
+    font-size: 18px;
+    padding: 14px 12px 14px 12px;
+  }
+  .contact-submit-button:hover {
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    background-color: rgba(0,0,0,0.8);
+    text-shadow: 0px 0px 1px white;
+    color: white;
+  }
+  .contact-submit-button:active {
+    background-color: rgb(65, 65, 65);
+    color: white;
+  }
+  .contact-backdrop {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+    overflow: hidden;
+  }
+  .contact-box {
+    position: fixed;
+    width: 60%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+  }
+  .contact-box > h3 {
+    font-size: 30px;
+    border-bottom-style: double;
+    padding-bottom: 10px;
+  }
+  .contact-box > p {
+    font-size: 24px;
+  }
+  .contact-box > button {
+    -webkit-box-shadow: inset  4px  10px 10px -10px white,
+                        inset -4px -10px 20px -10px black,
+                               1px   2px  5px   0px black;
+    -moz-box-shadow: inset  4px  10px 10px -10px white,
+                     inset -4px -10px 20px -10px black,
+                            1px   2px  5px   0px black;
+    box-shadow: inset  4px  10px 10px -10px white,
+                inset -4px -10px 20px -10px black,
+                       1px   2px  5px   0px black;
+    background-color: rgb(230, 230, 230);
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    /*border-radius: 6px;*/
+    border-radius: 4% / 40%;
+    font-size: 24px;
+    padding: 4px 12px 4px 12px;
+  }
+  .sent-box {
+    position: fixed;
+    width: 26%;
+    height: 8%;
+    top: 92%;
+    left: 74%;
+    background-color: #777;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .sent-box > p {
+    font-size: 2.3vh;
+    margin: 0;
+    padding-left: 4px;
+    padding-top: 4px;
+  }
+  .contact-info {
+    background-color: white;
+    font-size: 18px;
+    width: 325px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    border-style: solid;
+    border-width: 2px;
+  }
+  .contact-info > h3 {
+    font-size: 26px;
+    border-bottom-style: solid;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .contact-info > p {
+    padding-left: 10px;
+  }
+  .contact-info > p > span {
+    color: white;
+    user-select: none;
+  }
+  /* #endregion contact 600px mobile */ 
 }
 @media all and (min-width: 601px) {
   /* #region navigation 600px mobile */

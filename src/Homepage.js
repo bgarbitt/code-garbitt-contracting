@@ -209,7 +209,9 @@ class Modal extends Component {
             onClick={this.handleClick}>
             &times;
           </button>
-          <h2>{this.props.service["service"]}</h2>
+          <div className="service-modal-header">
+            <h2>{this.props.service["service"]}</h2>
+          </div>
           <p dangerouslySetInnerHTML={{__html: this.props.service["description"]}} />
           <h3>Video Example (if available)</h3>
           <div className="video-container">
