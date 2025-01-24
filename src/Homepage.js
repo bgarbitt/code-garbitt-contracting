@@ -515,7 +515,6 @@ class Contact extends Component {
       return response.json();
     }).then(data => {
       this.setState({
-        //data = {"confirmed":[true/false]}
         confirmed: data.confirmed
       })
     }).catch(error => console.error(error));
@@ -573,9 +572,8 @@ class Contact extends Component {
             <h3>Contact Information</h3>
             <p>
               Owner: <i>(780) 524-8267</i> (Hugh Garbitt)<br/>
-              Email: <i>garbitt@telus.net</i><br/>
+              Email: <i>garbittltd@gmail.com</i><br/>
               Office: <i>(780) 524-4754</i><br/>
-              Fax: <i>(780) 524-4753</i><br/>
               Location: SW-21-70-23-W5<br/>
               <span className="background-color-text">Location: </span>Valleyview, AB<br/>
               <span className="background-color-text">Location: </span>T0H 3N0, Box 131<br/>
